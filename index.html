@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hack3rs L4b</title>
+</head>
+
+<body>
+    <div class="barra ">
+        <div class="detalleslogo">
+            <i class='bx bx-shield'></i>
+            <spam class="logo_nombre"> Hack3rs L4b</spam>
+        </div>
+        <ul class="linknav">
+            <li>
+                <a href="#">
+                    <i class='bx bx-home-alt'></i>
+                    <span class="nombrelogo">Home</span>
+                </a>
+                <ul class="submenu">
+                    <li><a href="#" class="nombrelogo">Home</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="linkicon">
+                    <a href="#">
+                        <i class='bx bx-question-mark'></i>
+                        <span class="nombrelogo">Quiénes Somos</span>
+                    </a>
+                    <i class='bx bx-chevron-down flecha'></i>
+                </div>
+                <ul class="submenu">
+                    <li><a href="#" class="nombrelogo">¿Quiénes Somos?</a></li>
+                    <li><a href="#">Misión</a></li>
+                    <li><a href="#">Visión</a></li>
+                    <li><a href="#">Líneas de investigación</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-user-check'></i>
+                    <span class="nombrelogo">Postúlate</span>
+                </a>
+                <ul class="submenu ">
+                    <li><a href="#" class="nombrelogo">Postúlate</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-calendar-event'></i>
+                    <span class="nombrelogo">Eventos</span>
+                </a>
+                <ul class="submenu ">
+                    <li><a href="#" class="nombrelogo">Eventos</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-book-open'></i>
+                    <span class="nombrelogo">Proyectos</span>
+                </a>
+                <ul class="submenu ">
+                    <li><a href="#" class="nombrelogo">Proyectos</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-photo-album'></i>
+                    <span class="nombrelogo">Galería</span>
+                </a>
+                <ul class="submenu ">
+                    <li><a href="#" class="nombrelogo">Galería</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-user'></i>
+                    <span class="nombrelogo">Integrantes</span>
+                </a>
+                <ul class="submenu ">
+                    <li><a href="#" class="nombrelogo">Integrantes</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-link'></i>
+                    <span class="nombrelogo">Enlaces</span>
+                </a>
+                <ul class="submenu ">
+                    <li><a href="#" class="nombrelogo">Enlaces</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-contact' style='color:#fffcfa'></i>
+                    <span class="nombrelogo">Contacto</span>
+                </a>
+                <ul class="submenu ">
+                    <li><a href="#" class="nombrelogo">Contacto</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-message-square-dots'></i>
+                    <span class="nombrelogo">Foro</span>
+                </a>
+                <ul class="submenu ">
+                    <li><a href="#" class="nombrelogo">Foro</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="is">
+                    <a href="#">
+                        <i class='bx bx-log-in' style='color:#fffcfa'></i>
+                        <span class="nombrelogo">Iniciar Sesión</span>
+                    </a>
+                    <ul class="submenu ">
+                        <li><a href="#" class="nombrelogo">Iniciar Sesión</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'></i>
+            <p class="text">Overview</p>
+        </div>
+        </section>
+
+        <script>
+            let arrow = document.querySelectorAll(".flecha");
+            console.log(arrow);
+            for (var i = 0; i < arrow.length; i++) {
+                arrow[i].addEventListener("click", (e) => {
+                    let arrowParent = e.target.parentElement.parentElement;
+                    console.log(arrowParent);
+                    arrowParent.classList.toggle('showMenu');
+                });
+            }
+            let home = document.querySelector(".home-section");
+            let barra = document.querySelector(".barra");
+            let barrabtn = document.querySelector(".bx-menu");
+            let text = document.querySelector(".text");
+
+            console.log(barrabtn);
+            barrabtn.addEventListener("click", () => {
+                barra.classList.toggle("close");
+                home.classList.toggle("close");
+            });
+            text.addEventListener("click", () => {
+                barra.classList.toggle("close");
+                home.classList.toggle("close");
+            });
+
+
+        </script>
+
+</body>
+
+</html>
