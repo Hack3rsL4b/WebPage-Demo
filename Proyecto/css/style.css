@@ -1,14 +1,31 @@
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins&family=Tourney&display=swap');
 
-:root {
-    --oscuro-principal: #282C35;
-    --claro-princial: #DBD3D8;
+/* Globales */
+
+:root { 
+    --primario: #282C35;
+    --secundario: #DBD3D8;
     --azul: #004BA8;
     --celeste: #66A8B6;
     --fondo-actual: #11101d;
+    --header: #181C24;
+    --background: #282C35;
+    --hover: #484F5F;
+    --lightgrey: #DBD3D8;
+    --color-title-buttons: #00D4EB;
+    --title: 'Audiowide', cursive;
+    --text: 'Poppins', sans-serif;
+    --console: 'Roboto Mono', monospace;
+    --tourney: 'Tourney', cursive;
 }
-
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *::before,*::after{
+    box-sizing: inherit;
+}
 * {
     margin: 0;
     padding: 0;
@@ -19,14 +36,59 @@
 a {
     text-decoration: none;
 }
-
 i {
     cursor: pointer;
 }
 
+/* Header */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primario);
+}
+.logo{
+    padding-left: 2rem;
+    align-items: center;
+    display: inline;
+    display: flex;
+}
+.ilogo{
+    height: 7rem;
+}
+.nombre{
+    color: white;
+    font-family: var(--title);
+    font-size: 5rem;
+}
+.nombre span{
+    font-family: var(--title);
+    color: var(--color-title-buttons);
+}
+.inciarsesion{
+    padding-right: 3rem;
+}
+.registro,.inicio{
+    color: white;
+    font-family: var(--console);
+}
+.registro{
+    padding: 2rem;
+}
+.inicio{
+    color: var(--color-title-buttons);
+    border-radius: 10%;
+    border: 1px solid var(--color-title-buttons);
+    padding: 1.5rem;
+}
+
+
+/* Menu Lateral */
+
 .barra {
     position: fixed;
-    top: 0;
+
     left: 0;
     height: 100%;
     width: auto;
