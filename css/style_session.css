@@ -1,0 +1,177 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins&family=Tourney&display=swap');
+
+/* Globales */
+
+
+
+:root { 
+    --primario: #282C35;
+    --secundario: #DBD3D8;
+    --azul: #004BA8;
+    --celeste: #66A8B6;
+    --fondo-actual: #11101d;
+    --header: #181C24;
+    --background: #282C35;
+    --hover: #484F5F;
+    --lightgrey: #DBD3D8;
+    --color-title-buttons: #00D4EB;
+    --title: 'Audiowide', cursive;
+    --text: 'Poppins', sans-serif;
+    --console: 'Roboto Mono', monospace;
+    --tourney: 'Tourney', cursive;
+    --verde: #00a82d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--text);
+    font-size: 12px;
+
+}
+
+.container_session{
+    width:100%;
+    height: 100%;
+    background-color: var(--background);
+    background-position: center;
+    background-size: cover;
+    position:absolute;
+}
+
+.box-img{
+    width: 370px;
+    height: 455px;
+    right: 52%;
+    position:relative;
+    margin: 6% auto;
+    background-image: url(../img/fondo.png);
+    padding: 5px;
+    border-radius: 10px 0px 0px 10px;
+    float: right;
+}
+
+.atras img{
+    margin: 30px 0px 0px 5px;
+    width: 20px;
+    float: left;
+}
+
+.toogle-btnatras{
+    margin: 30px 0px 0px 10px;
+    cursor: pointer;
+    background:transparent;
+    border: 0px;
+    outline: none;
+    position: relative;
+    float: left;
+}
+
+.form-box{
+    width: 370px;
+    height: 455px;
+    position:relative;
+    margin: 6% auto;
+    background-color: #ffff;
+    padding: 5px;
+    border-radius: 0px 10px 10px 0px;
+    overflow:hidden;
+    float: right;
+}
+
+
+
+.button-box{
+    width: 240px;
+    margin: 30px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #e0e0e0;
+    border-radius: 1.875rem;
+}
+
+.toogle-btn{
+    padding: 10px 22px;
+    cursor: pointer;
+    background:transparent;
+    border: 0px;
+    outline: none;
+    position: relative;
+}
+
+#elegir{
+    top:0;
+    left:0;
+    position: absolute;
+    width: 120px;
+    height: 100%;
+    background: linear-gradient(to right,#00D4EB,#00a82daf);
+    border-radius:30px;
+    transition: 0.8s;
+}
+
+.input-group{
+    top: 110px;
+    position: absolute;
+    width: 280px;
+    transition: 0.8s;
+}
+
+.input-group1{
+    top: 105px;
+    position: absolute;
+    width: 280px;
+    transition: 0.8s;
+}
+
+.input-field{
+    width: 100%;
+    padding: 10px 0px;
+    margin: 5px 0px;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom:0.125rem solid var(--background);
+    outline: none;
+    background: transparent;
+}
+
+.logo-hack{   
+    text-align: center;
+}
+
+.logo-hack img{
+    width: 150px;
+}
+.submit-btn{
+    width: 85%;
+    padding: 0.625rem 1.875rem;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right,#00D4EB,#00a82daf);
+    border: 0rem;
+    outline: none;
+    border-radius: 1.875rem;
+}
+
+
+
+.check-box{
+    margin: 1.875rem 0.625rem 1.875rem 0;
+}
+
+.span{
+    color:#11101d;
+    font-size: 12px;
+    bottom: 64px;
+    position: absolute;
+}
+
+#login{
+    left: 50px;
+}
+
+#registrar{
+    left: 430px;
+}
