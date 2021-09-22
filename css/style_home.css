@@ -45,4 +45,5 @@ h4{
 }
 .logoimagen{
     height: 7rem;
+    justify-content: flex-end;
 }
