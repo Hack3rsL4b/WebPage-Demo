@@ -23,9 +23,11 @@ html{
 }
 a{
     text-decoration: none;
+    font-size: 2rem;
 }
 h1{
     font-size: 4.8rem;
+    display: inline;
 }
 h2{
     font-size: 4rem;
@@ -38,12 +40,17 @@ h4{
 }
 /* Locales */
 
-.contenedor-header{
-    height: 20rem;
+.header{
+    height: 10rem;
     width: 100%;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
+.logoYtexto{
+    display: flex;
+}
+
 .logoimagen{
-    height: 7rem;
-    justify-content: flex-end;
+    height: 6rem;
 }
