@@ -46,6 +46,9 @@ a {
 i {
     cursor: pointer;
 }
+li{
+    list-style: none;
+}
 
 /* Header */
 
@@ -258,6 +261,46 @@ i {
 }
 .text, .bx-menu {
     cursor: pointer;
+}
+.perfil{
+    width: 29.6rem;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1d1b31;
+}
+.imgperfil{
+    height: 5.2rem;
+    width: 5.2rem;
+    object-fit: cover;
+    border-radius: 1.6rem;
+    margin: 0 1.4rem 0 1.2rem;
+    background: #1d1b31;
+    padding: .6rem 0;
+}
+.perfil-contenido{
+    display: flex;
+    align-items: center;
+}
+.nombre-perfil,
+.rol{
+    color: #ffff;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.rol{
+    font-size: 1.2rem;
+}
+.perfil i{
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px; 
+    color: #fff;
+    font-size: 20px ;
+    transition: all 0.3s ease;
 }
 
 /* Home */
