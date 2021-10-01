@@ -1,3 +1,18 @@
+<?php
+include_once('conexion.php');
+
+$con = mysqli_connect($host, $usuario, $clave, $bd) or die('Fallo la conexion');
+mysqli_set_charset($con, "utf8");
+
+session_start();
+if (isset($_SESSION['clave'])) {
+    $clave_ses = $_SESSION['clave'];
+} else {
+    header("Location: indexAdmin.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -5,11 +20,10 @@
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins&family=Roboto+Mono&family=Tourney&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins&family=Roboto+Mono&family=Tourney&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="icon" href="./img/icon.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../img/icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hack3rs L4b</title>
 </head>
@@ -18,21 +32,28 @@
     <header>
         <div class="header">
             <div class="logo">
-                <a href="index.html">
-                    <img src="img/iconNoBackground.png" alt="ImagenLogo" class="ilogo">
+                <a href="../index.html">
+                    <img src="../img/iconNoBackground.png" alt="ImagenLogo" class="ilogo">
                     <h1 class="nombre">Hack3rs <span>L4b</span></h1s>
                 </a>
             </div>
 
             <div class="inciarsesion">
-                <a href="./common/Inicio_de_sesion.html" class="registro">Registrate</a>
-                <a href="./common/Inicio_de_sesion.html"class="inicio">Iniciar Sesión</a>
+                <a href="../index.php" class="inicio" action="cerrar.php">Cerrar sesión</a>
             </div>
         </div>
     </header>
 
     <div class="barra ">
         <ul class="linknav">
+            <li>
+                <ul class="submenu">
+                    <li><a href="#" class="nombrelogo">¿Quiénes Somos?</a></li>
+                    <li><a href="#">Misión</a></li>
+                    <li><a href="#">Visión</a></li>
+                    <li><a href="#">Líneas de investigación</a></li>
+                </ul>
+            </li>
             <li>
                 <div class="linkicon">
                     <a href="#" class="opc">
@@ -120,26 +141,45 @@
                     <li><a href="#" class="nombrelogo">Foro</a></li>
                 </ul>
             </li>
+
+            <li>
+                <div class="perfil">
+                    <div class="perfil-contenido">
+                        <img src="../img/perfil.png" alt="img perfil" class="imgperfil">
+                    </div>
+
+                    <div class="perfil-info">
+                        <div class="nombre-perfil">Gian Herrera</div>
+                        <div class="rol">Administrador</div>
+                    </div>
+                    <i class='bx bx-log-out'></i>
+                </div>
+            </li>
         </ul>
     </div>
 
+
     <div class="home">
-            <a href="#" class="continua-foro boton">Continúa al Foro</a>
+        <a href="#" class="continua-foro boton">Continúa al Foro</a>
 
         <div class="cuerpo">
             <span class="welcome">Bienvenidos al</span>
             <h2 class="title-home">Semillero de investigación de Seguridad Informática</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laboriosam consequatur odit, alias eaque doloribus. Nobis velit veritatis ullam quo nulla mollitia perspiciatis in earum eligendi ipsum, autem ipsam quae! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, dignissimos quo. Eligendi labore ut nostrum fugit eum quibusdam quaerat amet nemo deleniti autem cum voluptates eveniet temporibus, excepturi pariatur porro!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laboriosam consequatur odit, alias
+                eaque doloribus. Nobis velit veritatis ullam quo nulla mollitia perspiciatis in earum eligendi ipsum,
+                autem ipsam quae! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, dignissimos quo.
+                Eligendi labore ut nostrum fugit eum quibusdam quaerat amet nemo deleniti autem cum voluptates eveniet
+                temporibus, excepturi pariatur porro!</p>
             <a href="#" class="boton conoce-mas">Conoce más</a>
         </div>
     </div>
 
     <div class="redes">
         <div class="pictures">
-            <a href="#" class="logotipos"><i class='bx bxl-facebook-circle' style='color:#ffffff'></i></a>
-            <a href="#" class="logotipos"><i class='bx bx-envelope' style='color:#ffffff' ></i></a>
-            <a href="#" class="logotipos"><i class='bx bxl-youtube' style='color:#ffffff' ></i></a>
-            <a href="#" class="logotipos"><i class='bx bxl-github' style='color:#ffffff' ></i></a>
+            <a href="#" class="logotipos"><i class='bx bxl-facebook-circle'></i></a>
+            <a href="#" class="logotipos"><i class='bx bx-envelope'></i></a>
+            <a href="#" class="logotipos"><i class='bx bxl-youtube'></i></a>
+            <a href="#" class="logotipos"><i class='bx bxl-github'></i></a>
         </div>
         <div class="line">
 

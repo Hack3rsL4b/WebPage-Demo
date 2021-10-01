@@ -22,7 +22,7 @@
             <div class="group1">
                 <div class="atras">
                     <img src="../img/atras.png" alt="">
-                    <button type="button" class="toogle-btnatras"><a href="../index.html" class="atras">Volver a la
+                    <button type="button" class="toogle-btnatras"><a href="../index.php" class="atras">Volver a la
                             página de inicio</a></button>
 
                 </div>
@@ -33,26 +33,24 @@
                     <button type="button" class="toogle-btn" onclick="login()">Inicia sesión</button>
                     <button type="button" class="toogle-btn" onclick="registrar()">Regístrate</button>
                 </div>
-                <form id="login" class="input-group">
+                <form id="login" class="input-group" method="post" action="validar.php" >
                     <div class="logo">
                         <img src="../img/iconNoBackground.png" alt="icono_hacks">
                     </div>
                     <input type="text" class="input-field" placeholder="Usuario" name="usuario" required>
                     <input type="password" class="input-field" placeholder="Contraseña" name="contrasena" required>
                     <input type="checkbox" class="check-box"><span>Recordar contraseña</span>
-
-                    <a href="./perfil.html"><button type="button" class="submit-btn">Acceder</button></a>
-
-
+                    <input type="submit" value="Acceder" name="login"class="submit-btn">
                 </form>
-                <form id="registrar" class="input-group1">
-                    <input type="text" class="input-field" placeholder="Nombre" required>
-                    <input type="text" class="input-field" placeholder="Usuario" required>
-                    <input type="text" class="input-field" placeholder="Correo" required>
-                    <input type="tel" class="input-field" placeholder="Teléfono" required>
-                    <input type="password" class="input-field" placeholder="Contraseña" required>
+                
+                <form id="registrar" class="input-group1" method="post" action="agregar.php">
+                    <input type="text" class="input-field" placeholder="Nombre" name="inombre" required>
+                    <input type="text" class="input-field" placeholder="Usuario" name="iusuario" required>
+                    <input type="email" class="input-field" name="iemail" placeholder="Correo" required>
+                    <input type="number" class="input-field" name="itel" placeholder="Teléfono" required>
+                    <input type="text" class="input-field" name="icontrasena" placeholder="Contraseña" required>
                     <input type="checkbox" class="check-box"><span>Acepto los términos y condiciones</span>
-                    <button type="submit" class="submit-btn sbtn">Registrarse</button>
+                    <input type="submit" value="Registrarse" name="signup" class="submit-btn sbtn">
                 </form>
             </div>
         </div>
