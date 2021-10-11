@@ -23,12 +23,12 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box;
+    height: 100%;
 }
 
 body {
     height: 100%;
     color: white;
-
     font-size: 1.3rem;
 }
 
@@ -446,3 +446,60 @@ li {
     height: 100%;
 }
 
+/* Perfil.php */
+.flexperfil{
+    height: 100%;
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gridperfil{
+    border-radius: 1.5rem;
+    display: grid;
+    grid-template-rows: [rw1]1fr [rw2]1fr;
+    background-color: rgba(0,0,0,0.3);
+    backdrop-filter: blur(1rem);
+    -webkit-box-shadow: 0px 0px 50px -1px rgba(255,255,255,0.31); 
+    box-shadow: 0px 0px 50px -1px rgba(255,255,255,0.31);
+}
+
+.img-perfil{
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    height: 35rem;
+    width: 65rem;
+    grid-row: rw1;
+    background-image: url(../img/fondo.jpeg);
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+.opacidad{
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 60%);
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+}
+.fotoperfil{
+    height: 15rem;
+    width: 15rem;
+    background-color: rgba(0,0,0,0.3);
+    backdrop-filter: blur(1rem);
+}
+.fotoperfil img{
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    
+}
+.contenedor-perfil{
+    color: #11101d;
+    grid-row: rw2;
+    height: 30rem;
+}
