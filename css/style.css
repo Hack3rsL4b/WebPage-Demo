@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins&family=Tourney&display=swap');
 
 /* Globales */
-
 :root { 
     --primario: #282C35;
     --secundario: #DBD3D8;
@@ -20,39 +19,46 @@
     --tourney: 'Tourney', cursive;
     --verde: #00a82d;
 }
-html{
+
+html {
     font-size: 62.5%;
     box-sizing: border-box;
 }
-body{
+
+body {
     height: 100%;
     color: white;
 
     font-size: 1.3rem;
 }
-*, *::before,*::after{
+
+*, *::before, *::after {
     box-sizing: inherit;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
 }
+
 a {
     text-decoration: none;
     color: white;
 }
+
 i {
     cursor: pointer;
 }
-li{
+
+li {
     list-style: none;
 }
 
 /* Header */
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,55 +66,70 @@ li{
     min-width: 73px;
     height: 11rem;
 }
-.logo{
+
+.logo {
     padding-left: 2rem;
     align-items: center;
     display: inline;
     display: flex;
 }
-.ilogo{
-    height: 7rem;
+
+.ilogo {
+    height: 9rem;
 }
-.nombre{
+
+.nombre {
     font-family: var(--title);
-    font-size: 6.5rem;
+    font-size: 5.5rem;
 }
-.nombre span{
+
+.nombre span {
     font-family: var(--title);
     color: var(--color-title-buttons);
 }
-.inciarsesion{
+
+.inciarsesion {
     padding-right: 3rem;
 }
-.registro,.inicio{
+
+.registro, .inicio {
     color: white;
     font-family: var(--console);
     font-size: 1.7rem;
 }
-.registro{
+
+.registro {
     padding: 2rem;
 }
-.inicio{
+
+.inicio {
     color: var(--color-title-buttons);
-    border-radius: 10%;
+    border-radius: 1rem;
     border: 1px solid var(--color-title-buttons);
     padding: 1.5rem;
+    background: linear-gradient(to left, var(--fondo-actual) 50%, var(--color-title-buttons) 50%) right;
+    background-size: 200%;
+    transition: .4s ease-out;
 }
 
+.inicio:hover {
+    background-position: left;
+    color: var(--fondo-actual);
+}
 
 /* Menu Lateral */
-
-.barra{
+.barra {
     position: fixed;
     left: 0;
     height: 100%;
-    min-width: 29.6rem;
+    min-width: 29rem;
     max-width: 20%;
     background-color: var(--fondo-actual);
     z-index: 100;
     transition: all 0.5s ease;
     font-family: var(--text);
 }
+
 .barra .linknav {
     height: 100%;
     overflow: auto;
@@ -123,16 +144,19 @@ li{
     list-style: none;
     transition: all 0.3s ease;
 }
-.barra .linknav li:hover{
+
+.barra .linknav li:hover {
     background-color: var(--hover);
 }
+
 .barra .linknav li .linkicon {
-     display: flex;
-     align-items: center;
+    display: flex;
+    align-items: center;
 }
+
 .barra .linknav li i {
     height: 50px;
-    min-width: 78px;
+    min-width: 50px;
     text-align: center;
     line-height: 50px; 
     color: #fff;
@@ -142,7 +166,6 @@ li{
 
 .barra .linknav li.showMenu i.flecha {
     transform: rotate(180deg);
-
 }
 
 .barra .linknav li a {
@@ -162,10 +185,12 @@ li{
     display: none;  
     padding-left: 3rem;
 }
+
 .barra .linknav li.showMenu .submenu {
     display: flex;
     flex-direction: column;
 }
+
 .barra .linknav li .submenu a {
     color:white;
     font-size: 15px;
@@ -174,10 +199,12 @@ li{
     opacity: 0.6;
     transition: all 0.3s ease;
 }
+
 .barra .linknav .submenu a:hover {
     opacity: 1;
     color: var(--color-title-buttons);
 }
+
 .barra.close .linknav li:hover .submenu {
     top: 0;
     opacity: 1;
@@ -259,11 +286,13 @@ li{
     font-size: 26px;
     font-weight: 600;
 }
+
 .text, .bx-menu {
     cursor: pointer;
 }
+
 .perfil{
-    width: 29.6rem;
+    width: 29rem;
     position: fixed;
     bottom: 0;
     display: flex;
@@ -271,7 +300,8 @@ li{
     justify-content: space-between;
     background-color: #1d1b31;
 }
-.imgperfil{
+
+.imgperfil {
     height: 5.2rem;
     width: 5.2rem;
     object-fit: cover;
@@ -280,20 +310,23 @@ li{
     background: #1d1b31;
     padding: .6rem 0;
 }
-.perfil-contenido{
+
+.perfil-contenido {
     display: flex;
     align-items: center;
 }
-.nombre-perfil,
-.rol{
+
+.nombre-perfil, .rol {
     color: #ffff;
     font-size: 1.8rem;
     font-weight: 500;
 }
-.rol{
+
+.rol {
     font-size: 1.2rem;
 }
-.perfil i{
+
+.perfil i {
     height: 50px;
     min-width: 78px;
     text-align: center;
@@ -304,80 +337,105 @@ li{
 }
 
 /* Home */
-.home{
+.home {
     position: fixed;
     right: 0;
-    max-width: calc(100% - 29.6rem);
+    max-width: calc(100% - 29rem);
     width: auto;
     height: 100%;
     background-color: var(--background);
     display: inline;
     font-family: var(--text);
 }
-.boton{
+
+.boton {
     border-radius: 1rem;
-    border: 1px solid var(--verde);
     font-family: var(--console);
     font-size: 1.7rem;
     padding: 2rem;
     display: inline;
 }
-.continua-foro{
+
+.continua-foro {
     position: fixed;
     right: 0;
-    color: var(--verde);
-    color: var(--verde);
     margin-top: 3rem;
     margin-right: 3rem;
+    color: var(--verde);
+    border: 1px solid var(--verde);
+    background: linear-gradient(to left, var(--background) 50%, var(--verde) 50%) right;
+    background-size: 200%;
+    transition: .4s ease-out;
 }
-.cuerpo{
-    padding-left: 10rem;
-    padding-top: 9rem;
+
+.continua-foro:hover {
+    background-position: left;
+    color: var(--background);
+}
+
+.cuerpo {
+    padding-left: 8rem;
+    padding-top: 7rem;
     margin-right: 20rem;
     font-size: 2rem;
 }
-.welcome{
+
+.welcome {
     color: var(--color-title-buttons);
     font-size: 2.5rem;
     font-family: var(--console);
 }
-.title-home{
+
+.title-home {
     margin-top: 2rem;
     margin-bottom: 5rem;
     font-family: var(--title);
     font-size: 5rem;
 }
-.conoce-mas{
+
+.conoce-mas {
     display: block;
     position: fixed;
     margin-top: 3rem;
     color: var(--color-title-buttons);
     border: 1px solid var(--color-title-buttons);
+    background: linear-gradient(to left, var(--background) 50%, var(--color-title-buttons) 50%) right;
+    background-size: 200%;
+    transition: .4s ease-out;
 }
-.redes{
+
+.conoce-mas:hover {
+    background-position: left;
+    color: var(--background);
+}
+
+.redes {
     position: fixed;
     right: 0;
     bottom: 0;
     display: flex;
     opacity: 0.5;
-    margin-bottom: 20rem;
+    margin-bottom: 16rem;
     margin-right: 3rem;
 }
-.logotipos{
+
+.logotipos {
     height:5rem;
-    min-width: 8rem;
+    min-width: 3rem;
+    margin-right: 5rem;
     line-height: 6rem; 
     color: #fff;
     font-size: 3rem;
     display: block;
 }
-.line{
+
+.line {
     border: 1px solid white;
     position: fixed;
     width: 0.1rem;
-    height: 17rem;
+    height: 15rem;
     right: 9.2rem;
-    bottom: 2rem;
+    bottom: 0;
     opacity: 0.5;
 }
 

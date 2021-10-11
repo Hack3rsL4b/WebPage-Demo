@@ -13,7 +13,32 @@
 </head>
 
 <body>
-    
+
+    <?php
+    include_once("../php/conexion.php");
+    include_once("../php/obtener-usuario.php");
+
+    $pwd = isset($_GET['pwd']) ? $_GET['pwd'] : '';
+
+    $consulta = "SELECT
+    $bd.actividades.id_actividad AS id,
+    $bd.actividades.actividad AS actividad,
+    $bd.actividades.enlace AS enlace
+    FROM
+    $bd.usuarios,
+    $bd.actividades,
+    $bd.roles,
+    $bd.permisos
+    WHERE
+    $bd.permisos.rol = $bd.roles.id_rol AND
+    $bd.permisos.actividad = $bd.actividades.id_actividad AND
+    $bd.roles.id_rol = $bd.usuarios.roles_id_rol AND
+    $bd.usuarios.contrasenia = '$pwd';";
+
+    $resultado = mysqli_query($con, $consulta) or die(mysqli_error($con));
+
+    ?>
+
     <header>
         <div class="header">
             <div class="logo">
@@ -32,98 +57,43 @@
 
     <div class="barra ">
         <ul class="linknav">
-            <li>
-                <div class="linkicon">
-                    <a href="#" class="opc">
-                        <i class='bx bx-question-mark'></i>
-                        <p class="nombrelogo ">Quiénes Somos</p>
+            <?php
+            while ($fila = mysqli_fetch_array($resultado)) {
+                $destino = $fila['enlace'] . '?id=' . $fila['id'];
+                $actividad = $fila['actividad'];
+            ?>
+                <li>
+                    <a href="<?php echo $destino ?>" target="contenedor">
+                        <i class=''></i>
+                        <span class="nombrelogo"><?php echo $actividad ?></span>
                     </a>
-                    <i class='bx bx-chevron-down flecha'></i>
+                    <ul class="submenu ">
+                        <li><a href="#" class="nombrelogo"><?php echo $actividad ?></a></li>
+                    </ul>
+                </li>
+            <?php
+            }
+            mysqli_close($con);
+            ?>
+
+            <li>
+                <div class="perfil">
+                    <div class="perfil-contenido">
+                        <img src="../img/perfil.png" alt="img perfil" class="imgperfil">
+                    </div>
+
+                    <div class="perfil-info">
+                        <div class="nombre-perfil"><?php echo $nombre_usuario ?></div>
+                        <div class="rol"><?php echo $rol ?></div>
+                    </div>
+                    <a href="../php/cerrar.php"><i class='bx bx-log-out'></i></a>
                 </div>
-                <ul class="submenu">
-                    <li><a href="#" class="nombrelogo">¿Quiénes Somos?</a></li>
-                    <li><a href="#">Misión</a></li>
-                    <li><a href="#">Visión</a></li>
-                    <li><a href="#">Líneas de investigación</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-user-check'></i>
-                    <span class="nombrelogo">Postúlate</span>
-                </a>
-                <ul class="submenu ">
-                    <li><a href="#" class="nombrelogo">Postúlate</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-calendar-event'></i>
-                    <span class="nombrelogo">Eventos</span>
-                </a>
-                <ul class="submenu ">
-                    <li><a href="#" class="nombrelogo">Eventos</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-book-open'></i>
-                    <span class="nombrelogo">Proyectos</span>
-                </a>
-                <ul class="submenu ">
-                    <li><a href="#" class="nombrelogo">Proyectos</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-photo-album'></i>
-                    <span class="nombrelogo">Galería</span>
-                </a>
-                <ul class="submenu ">
-                    <li><a href="#" class="nombrelogo">Galería</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-user'></i>
-                    <span class="nombrelogo">Integrantes</span>
-                </a>
-                <ul class="submenu ">
-                    <li><a href="#" class="nombrelogo">Integrantes</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-link'></i>
-                    <span class="nombrelogo">Enlaces</span>
-                </a>
-                <ul class="submenu ">
-                    <li><a href="#" class="nombrelogo">Enlaces</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bxs-contact' style='color:#fffcfa'></i>
-                    <span class="nombrelogo">Contacto</span>
-                </a>
-                <ul class="submenu ">
-                    <li><a href="#" class="nombrelogo">Contacto</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-message-square-dots'></i>
-                    <span class="nombrelogo">Foro</span>
-                </a>
-                <ul class="submenu ">
-                    <li><a href="#" class="nombrelogo">Foro</a></li>
-                </ul>
             </li>
         </ul>
     </div>
 
     <div class="home">
-        <a href="#" class="continua-foro boton">Continúa al Foro</a>
+        <a href="#" class="boton continua-foro">Continúa al Foro</a>
 
         <div class="cuerpo">
             <span class="welcome">Bienvenidos al</span>

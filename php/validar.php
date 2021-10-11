@@ -5,7 +5,7 @@ if (!isset($_POST['ilogin'])) {
 
     //1. Crear conexión a la Base de Datos
     $con = mysqli_connect($host, $usuario, $clave, $bd) or die('Fallo la conexion');
-    mysqli_set_charset($con, "utf-8");
+    mysqli_set_charset($con, "utf8");
 
     //Recoger datos Variables de Usuario
     $vusuario = $_POST['usuario'];
