@@ -9,7 +9,7 @@ if (!isset($session_pwd)) {
 }
 
 $con = mysqli_connect($host, $usuario, $clave, $bd) or die("Falló la conexión");
-mysqli_set_charset($con, "utf-8");
+mysqli_set_charset($con, "utf8");
 
 $query = "SELECT 
 $bd.usuarios.nombre AS nombre,
