@@ -92,27 +92,8 @@
         </ul>
     </div>
 
-    <div class="home">
-        <a href="#" class="boton continua-foro">Continúa al Foro</a>
-
-        <div class="cuerpo">
-            <span class="welcome">Bienvenidos al</span>
-            <h2 class="title-home">Semillero de investigación de Seguridad Informática</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laboriosam consequatur odit, alias eaque doloribus. Nobis velit veritatis ullam quo nulla mollitia perspiciatis in earum eligendi ipsum, autem ipsam quae! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, dignissimos quo. Eligendi labore ut nostrum fugit eum quibusdam quaerat amet nemo deleniti autem cum voluptates eveniet temporibus, excepturi pariatur porro!</p>
-            <a href="#" class="boton conoce-mas">Conoce más</a>
-        </div>
-    </div>
-
-    <div class="redes">
-        <div class="pictures">
-            <a href="#" class="logotipos"><i class='bx bxl-facebook-circle' style='color:#ffffff'></i></a>
-            <a href="#" class="logotipos"><i class='bx bx-envelope' style='color:#ffffff'></i></a>
-            <a href="#" class="logotipos"><i class='bx bxl-youtube' style='color:#ffffff'></i></a>
-            <a href="https://github.com/Hack3rsL4b" target="_blank" class="logotipos"><i class='bx bxl-github' style='color:#ffffff'></i></a>
-        </div>
-        <div class="line">
-
-        </div>
+    <div>
+        <iframe class="contenedor-iframe" src="bienvenida.php" frameborder="0" name="iframedash"></iframe>
     </div>
 
     <script>
