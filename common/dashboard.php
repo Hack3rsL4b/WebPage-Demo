@@ -55,8 +55,8 @@
         </div>
     </header>
 
-    <div class="barra " >
-        <ul class="linknav"style=" height:85%; overflow: scroll;">
+    <div class="barra" >
+        <ul class="linknav" style="height:85%; overflow: scroll;">
             <?php
             while ($fila = mysqli_fetch_array($resultado)) {
                 $destino = $fila['enlace'] . '?id=' . $fila['id'];

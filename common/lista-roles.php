@@ -4,15 +4,13 @@ include_once("../php/obtener-usuario.php");
 
 $con=mysqli_connect($host,$usuario,$clave,$bd) or die('Fallo la conexion');
 mysqli_set_charset($con,"utf8");
-
-
 ?>
+            
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <title>Usuarios</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
@@ -20,10 +18,8 @@ mysqli_set_charset($con,"utf8");
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins&family=Roboto+Mono&family=Tourney&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/style_gestion.css">
-
-</head>
-
-<script type="text/javascript">
+    <title>Usuarios</title>
+    <script type="text/javascript">
 	   function ConfirmDelete()
        {
 		   var respuesta = confirm("¿Esta seguro que desea Eliminar el Registro?");
@@ -37,13 +33,12 @@ mysqli_set_charset($con,"utf8");
 		   
 	   }
     </script>
-    
+</head>    
     
 <body>
         <!-- Consulta que permite seleccionar Los Nombres y Apellidos del Cliente -->
 		<?php
-        
-
+      
         
 		 $consulta="SELECT * FROM roles";
          $resultado = mysqli_query($con,$consulta) or die(mysql_error());
@@ -77,10 +72,7 @@ mysqli_set_charset($con,"utf8");
                
              }		   
       ?>
-        
-          
-          
-          
+
           
 <hr>
 <div class="tablecontainer">
