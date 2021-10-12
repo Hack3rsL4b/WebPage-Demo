@@ -26,9 +26,9 @@
 
     <div class="redes">
         <div class="pictures">
-            <a href="#" class="logotipos"><i class='bx bxl-facebook-circle' style='color:#ffffff'></i></a>
-            <a href="#" class="logotipos"><i class='bx bx-envelope' style='color:#ffffff'></i></a>
-            <a href="#" class="logotipos"><i class='bx bxl-youtube' style='color:#ffffff'></i></a>
+            <a href="#" target="_blank" class="logotipos"><i class='bx bxl-facebook-circle' style='color:#ffffff'></i></a>
+            <a href="#" target="_blank" class="logotipos"><i class='bx bx-envelope' style='color:#ffffff'></i></a>
+            <a href="#" target="_blank" class="logotipos"><i class='bx bxl-youtube' style='color:#ffffff'></i></a>
             <a href="https://github.com/Hack3rsL4b" target="_blank" class="logotipos"><i class='bx bxl-github' style='color:#ffffff'></i></a>
         </div>
         <div class="line">

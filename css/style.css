@@ -133,6 +133,7 @@ li {
 .barra .linknav {
     height: 100%;
     overflow: auto;
+    overflow: scroll;
 }
 
 .barra .linknav {

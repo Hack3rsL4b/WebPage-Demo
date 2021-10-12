@@ -23,6 +23,7 @@ if (!isset($_POST['ilogin'])) {
     while ($fila = mysqli_fetch_assoc($resultado)) {
         $usuario = $fila['usuario'];
         $contrasenia = $fila['contrasenia'];
+        $estado = $fila['estado'];
         $perfil = $fila['roles_id_rol'];
 
         session_start();
@@ -30,7 +31,7 @@ if (!isset($_POST['ilogin'])) {
         header("location: ../common/dashboard.php?pwd=$vcontrasenia");
     }
 
-    if ($usuario != $vusuario || $contrasenia != $vcontrasenia) {
+    if ($usuario != $vusuario || $contrasenia != $vcontrasenia || $estado != 'ACTIVO') {
         return_login();
         exit();
     }

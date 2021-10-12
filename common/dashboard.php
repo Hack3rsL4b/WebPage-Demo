@@ -55,15 +55,15 @@
         </div>
     </header>
 
-    <div class="barra ">
-        <ul class="linknav">
+    <div class="barra" >
+        <ul class="linknav" style="height:85%; overflow: scroll;">
             <?php
             while ($fila = mysqli_fetch_array($resultado)) {
                 $destino = $fila['enlace'] . '?id=' . $fila['id'];
                 $actividad = $fila['actividad'];
             ?>
                 <li>
-                    <a href="<?php echo $destino ?>" target="contenedor">
+                    <a href="<?php echo $destino ?>" target="iframedash">
                         <i class=''></i>
                         <span class="nombrelogo"><?php echo $actividad ?></span>
                     </a>
