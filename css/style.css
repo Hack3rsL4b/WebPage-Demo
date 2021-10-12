@@ -120,14 +120,17 @@ li {
 /* Menu Lateral */
 .barra {
     position: fixed;
+    top: 11rem;
     left: 0;
-    height: 100%;
+    bottom: 6rem;
+    max-height: calc(100% - 6rem);
     min-width: 29rem;
     max-width: 20%;
     background-color: var(--fondo-actual);
     z-index: 100;
     transition: all 0.5s ease;
     font-family: var(--text);
+    overflow: auto;
 }
 
 .barra .linknav {
@@ -443,17 +446,20 @@ li {
 .contenedor-iframe{
     position: fixed;
     right: 0;
+    bottom: 0;
+    top: 11rem;
     min-width: calc(100% - 29rem);
     height: 100%;
+    overflow: auto;
 }
 
-/* Perfil.php */
-.flexperfil{
+/* Perfil.php */.flexperfil{
     height: 100%;
     background-color: var(--background);
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -5.5rem;
 }
 .gridperfil{
     border-radius: 1.5rem;
@@ -468,10 +474,11 @@ li {
 .img-perfil{
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
-    height: 35rem;
-    width: 65rem;
+    height: 25rem;
+    width: 45rem;
     grid-row: rw1;
     background-image: url(../img/fondo.jpeg);
+    background-size: cover;
     background-repeat: no-repeat;
     position: relative;
 
@@ -484,23 +491,88 @@ li {
     height: 100%;
     background-color: rgb(0 0 0 / 60%);
     display: flex;
-    justify-content: center;   
+    justify-content: center;
     align-items: center;
 }
 .fotoperfil{
-    height: 15rem;
-    width: 15rem;
+    height: 10rem;
+    width: 10rem;
     background-color: rgba(0,0,0,0.3);
     backdrop-filter: blur(1rem);
+    border-radius: 1.5rem;
+
 }
-.fotoperfil img{
-    height: 15rem;
-    width: 15rem;
-    border-radius: 50%;
-    
+.perfil-imgnom{
+    display: flex;
+    align-items: center;
+}
+.perfil-nombre{
+    display: block;
+    font-size: 2.5rem;
+    font-family: var(--text);
+    margin-right: 3rem;
 }
 .contenedor-perfil{
-    color: #11101d;
+    background-color: var(--background);
+    height: 25rem;
+    font-family: var(--text);
     grid-row: rw2;
-    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+.perfil-g2{
+    display: grid;
+    grid-template-areas: "Nombre Apellido"
+                         "Usuario Contraseña"
+                         "Email Telefono";
+    grid-template-columns: 15rem 15rem;
+    column-gap: 2rem;
+}
+.perfil-g{
+    margin-bottom: 1rem;
+
+}
+.perfil-g label{
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.campo-inputp{
+    height: 2.2rem;
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom:0.1rem solid var(--hover);
+    color: var(--secundario);
+    font-size: 1.3rem;
+    text-align: center;
+}
+.perfil-enviar{
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: var(--secundario);
+    height: 2.5rem;
+    border: 1px solid var(--secundario);
+    width: 15rem;
+    margin-top: .8rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    background: linear-gradient(to left, var(--background) 50%, var(--secundario) 50%) right;
+    background-size: 200%;
+    transition: .4s ease-out;
+}
+.perfil-enviar:hover{
+    background-position: left;
+    color: var(--background);
+}
+.perfil-boton-enviar{
+    display: flex;
+    justify-content: center;
 }

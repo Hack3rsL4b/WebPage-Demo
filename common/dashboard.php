@@ -55,8 +55,8 @@
         </div>
     </header>
 
-    <div class="barra" >
-        <ul class="linknav" style="height:85%; overflow: scroll;">
+    <div class="barra">
+        <ul class="linknav" >
             <?php
             while ($fila = mysqli_fetch_array($resultado)) {
                 $destino = $fila['enlace'] . '?id=' . $fila['id'];
@@ -78,14 +78,16 @@
 
             <li>
                 <div class="perfil">
-                    <div class="perfil-contenido">
-                        <img src="../img/perfil.png" alt="img perfil" class="imgperfil">
-                    </div>
+                    <a href="perfil.php">
+                        <div class="perfil-contenido">
+                            <img src="../img/perfil.png" alt="img perfil" class="imgperfil">
+                        </div>
 
-                    <div class="perfil-info">
-                        <div class="nombre-perfil"><?php echo $nombre_usuario ?></div>
-                        <div class="rol"><?php echo $rol ?></div>
-                    </div>
+                        <div class="perfil-info">
+                            <div class="nombre-perfil"><?php echo $nombre_usuario ?></div>
+                            <div class="rol"><?php echo $rol ?></div>
+                        </div>
+                    </a>
                     <a href="../php/cerrar.php"><i class='bx bx-log-out'></i></a>
                 </div>
             </li>
