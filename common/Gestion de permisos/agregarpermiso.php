@@ -63,7 +63,7 @@ mysqli_set_charset($con,"utf8");
 					?>
 				</select>
 				  </p>
-				  <p>ROL:
+				  <p>PERFIL:
 				    <label for="crol"></label>
 					<select  id="crol" name="crol">
 					<option value="0">Seleccione:</option>
