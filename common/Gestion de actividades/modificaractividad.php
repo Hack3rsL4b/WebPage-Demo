@@ -42,8 +42,8 @@ mysqli_set_charset($con,"utf8");
 <form method="get" action="modificar.php" target="iframedash">
 
 		
-<<p>Usuario:
-<select  id="cid" name="cid">
+<<p>Actividad:
+<select  id="id" name="id">
         <option value="0">Seleccione:</option>
                 
 

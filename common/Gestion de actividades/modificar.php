@@ -37,10 +37,10 @@ body{
 <body>
         <?php
          
-         $idact = isset($_GET['cid']) ? $_GET['cid'] : '';
+         $id1 = isset($_GET['id']) ? $_GET['id'] : '';
          
 		 
-		 $consulta="SELECT * FROM $bd.actividades WHERE id_actividad = '$idact'";
+		 $consulta="SELECT * FROM $bd.actividades WHERE id_actividad = '$id1'";
 		
          $resultado = mysqli_query($con,$consulta) or die(mysql_error());
 		       
@@ -67,7 +67,7 @@ body{
       <tr>
       <td>ID: </td>
         <td><label for="cid"></label>
-        <input name="cid" type="text" id="cid" size="45" value="<?php echo $fila['id_actividad'];?>"  /></td>
+        <input name="cid" type="text" id="cid" size="45" value="<?php echo $fila['id_actividad'];?>"disabled/></td>
       </tr>
        <tr>
         <td>ACTIVIDAD: </td>
@@ -104,17 +104,17 @@ body{
 //1. Crear el proceso de actualización de los ddatos
 //2. Toma los datos provenientes del Formulario y posteriormente los asigna a los campos de tabla en la Base de Datos
    
-  $nid = isset($_POST['cid']) ? $_POST['cid'] : '';
+  $id1 = isset($_POST['cid']) ? $_POST['cid'] : '';
   $nactividad = isset($_POST['cactividad']) ? $_POST['cactividad'] : '';
   $ndescripcion = isset($_POST['cdescripcion']) ? $_POST['cdescripcion'] : '';
   $nenlace = isset($_POST['cenlace']) ? $_POST['cenlace'] : '';
  
      	
 	
-if( $nid !=null && $nactividad !=null && $ndescripcion !=null && $nenlace !=null){  
+if( $id1 !=null && $nactividad !=null && $ndescripcion !=null && $nenlace !=null){  
 		 
 $modificar="UPDATE $bd.actividades SET  actividad = '$nactividad', descripcion='$ndescripcion', 
-enlace = '$nenlace'  WHERE id_actividad='$nid'";
+enlace = '$nenlace'  WHERE id_actividad='$id1'";
 $resultado= mysqli_query($con, $modificar);
 
 
