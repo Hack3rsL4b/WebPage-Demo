@@ -82,11 +82,18 @@ mysqli_set_charset($con,"utf8");
 					</select>
 				  </p>
 
-				   <p>PERFIL:
-					<select name="cperfil" required>
-					<option value="1">Administrador</option> 
-					<option value="2">Integrante</option>  
-					</select>
+				  <p>PERFIL:
+				    <label for="cperfil"></label>
+					<select  id="cperfil" name="cperfil">
+					<option value="0">Seleccione:</option>
+					<?php
+					$consulta="SELECT * FROM roles";
+					$resultado = mysqli_query($con,$consulta) or die(mysql_error());
+					while ($fila = mysqli_fetch_array($resultado)) {
+					echo '<option value="'.$fila['id_rol'].'">'.$fila['nombre'].'</option>';
+					}
+					?>
+				</select>
 				  </p>
 				  <p>&nbsp;</p>
         </div>

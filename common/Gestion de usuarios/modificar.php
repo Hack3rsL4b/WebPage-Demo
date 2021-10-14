@@ -37,10 +37,10 @@ body{
 <body>
         <?php
          
-         $usuario = isset($_GET['cusuario']) ? $_GET['cusuario'] : '';
+         $id1 = isset($_GET['id']) ? $_GET['id'] : '';
          
 		 
-		 $consulta="SELECT * FROM $bd.usuarios WHERE usuario = '$usuario'";
+		 $consulta="SELECT * FROM $bd.usuarios WHERE id_usuario = '$id1'";
 		
          $resultado = mysqli_query($con,$consulta) or die(mysql_error());
 		       
@@ -63,7 +63,12 @@ body{
     <center>
       
       <table width="636" border="0">
-      <input name="cuser" type="text" id="cuser" size="45"  hidden="true" value="<?php echo $fila['usuario'];?>"/>
+      <input name="cid" type="text" id="cid" size="45"  hidden="true" value="<?php echo $fila['id_usuario'];?>"/>
+      <tr>
+      <td>ID: </td>
+        <td><label for="cid"></label>
+        <input name="cid" type="text" id="cid" size="45" value="<?php echo $fila['id_usuario'];?>" disabled /></td>
+      </tr>
       <tr>
       <td>USUARIO: </td>
         <td><label for="cuser"></label>
@@ -95,14 +100,25 @@ body{
         <input name="cemail" type="text" id="cemail" size="45" value="<?php echo $fila['email'];?>" /></td>
       </tr>
       <tr>
-        <td>ESTADO: </td>
-        <td><label for="cestado"></label>
-        <input name="cestado" type="text" id="cestado" size="45" value="<?php echo $fila['estado'];?>" /></td>
-      </tr>
-      <tr>
+      <td>ESTADO:
+      <td><select name="cestado" required>
+					<option value="ACTIVO">Activo</option> 
+					<option value="INACTIVO">Inactivo</option>  
+					</select></td>
+          </td>
+          <tr>   
         <td>PERFIL: </td>
         <td><label for="cperfil"></label>
-        <input name="cperfil" type="text" id="cperfil" size="45" value="<?php echo $fila['roles_id_rol'];?>" /></td>
+        <select  id="cperfil" name="cperfil">
+					<option value="0">Seleccione:</option>
+					<?php
+					$consulta="SELECT * FROM roles";
+					$resultado = mysqli_query($con,$consulta) or die(mysql_error());
+					while ($fila = mysqli_fetch_array($resultado)) {
+					echo '<option value="'.$fila['id_rol'].'">'.$fila['nombre'].'</option>';
+					}
+					?>
+				</select>
       </tr>
       <tr>
         
@@ -125,7 +141,8 @@ body{
  <?php
 //1. Crear el proceso de actualización de los ddatos
 //2. Toma los datos provenientes del Formulario y posteriormente los asigna a los campos de tabla en la Base de Datos
-   
+
+  $id1 = isset($_POST['cid']) ? $_POST['cid'] : '';
   $nusuario = isset($_POST['cuser']) ? $_POST['cuser'] : '';
   $nclave = isset($_POST['cclave']) ? $_POST['cclave'] : '';
   $nnombre = isset($_POST['cnombre']) ? $_POST['cnombre'] : '';
@@ -138,8 +155,8 @@ body{
 	
 if( $nnombre !=null && $napellido !=null && $nusuario !=null && $nclave !=null){  
 		 
-$modificar="UPDATE $bd.usuarios SET  contrasenia = '$nclave', nombre='$nnombre', apellido = '$napellido',
-telefono = '$ntelefono', email = '$nemail', estado ='$nestado', roles_id_rol = '$nperfil'  WHERE usuario='$nusuario'";
+$modificar="UPDATE $bd.usuarios SET  usuario = '$nusuario', contrasenia = '$nclave', nombre='$nnombre', apellido = '$napellido',
+telefono = '$ntelefono', email = '$nemail', estado ='$nestado', roles_id_rol = '$nperfil'  WHERE id_usuario='$id1'";
 $resultado= mysqli_query($con, $modificar);
 
 

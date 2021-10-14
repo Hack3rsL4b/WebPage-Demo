@@ -43,7 +43,7 @@ mysqli_set_charset($con,"utf8");
 
 		
 <<p>Usuario:
-<select  id="cusuario" name="cusuario">
+<select  id="id" name="id">
         <option value="0">Seleccione:</option>
                 
 
@@ -53,7 +53,7 @@ mysqli_set_charset($con,"utf8");
         $resultado = mysqli_query($con,$consulta) or die(mysql_error());
        
         while ($fila = mysqli_fetch_array($resultado)) {
-          echo '<option value="'.$fila['usuario'].'">'.$fila['usuario'].'</option>';
+          echo '<option value="'.$fila['id_usuario'].'">'.$fila['usuario'].'</option>';
         }
         ?>
  
