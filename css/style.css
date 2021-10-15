@@ -115,6 +115,7 @@ li {
 .inicio:hover {
     background-position: left;
     color: var(--fondo-actual);
+    cursor: pointer;
 }
 
 /* Menu Lateral */
@@ -374,6 +375,7 @@ li {
 .continua-foro:hover {
     background-position: left;
     color: var(--background);
+    cursor: pointer;
 }
 
 .cuerpo {
@@ -410,6 +412,7 @@ li {
 .conoce-mas:hover {
     background-position: left;
     color: var(--background);
+    cursor: pointer;
 }
 
 .redes {
