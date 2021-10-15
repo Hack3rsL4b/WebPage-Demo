@@ -21,14 +21,15 @@ if (!isset($_POST['ilogin'])) {
     $resultado = mysqli_query($con, $consulta);
 
     while ($fila = mysqli_fetch_assoc($resultado)) {
+        $id = $fila['id_usuario'];
         $usuario = $fila['usuario'];
         $contrasenia = $fila['contrasenia'];
         $estado = $fila['estado'];
         $perfil = $fila['roles_id_rol'];
 
         session_start();
-        $_SESSION['clave'] = $vcontrasenia;
-        header("location: ../common/dashboard.php?pwd=$vcontrasenia");
+        $_SESSION['id']=  $id ;
+        header("location: ../common/dashboard.php?id=$id");
     }
 
     if ($usuario != $vusuario || $contrasenia != $vcontrasenia || $estado != 'ACTIVO') {
