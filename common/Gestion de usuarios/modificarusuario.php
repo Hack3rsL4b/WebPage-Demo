@@ -38,7 +38,7 @@ mysqli_set_charset($con,"utf8");
         <?php
         
         $consulta="SELECT * FROM usuarios";
-        $resultado = mysqli_query($con,$consulta) or die(mysql_error());
+        $resultado = mysqli_query($con,$consulta) or die(mysqli_error($con));
        
         while ($fila = mysqli_fetch_array($resultado)) {
           echo '<option value="'.$fila['id_usuario'].'">'.$fila['usuario'].'</option>';
