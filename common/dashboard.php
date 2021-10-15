@@ -76,7 +76,7 @@
 
             <li>
                 <div class="perfil">
-                    <a href="perfil.php">
+                    <a href="perfil.php" target="iframedash">
                         <div class="perfil-contenido">
                             <img src="../img/perfil.png" alt="img perfil" class="imgperfil">
                         </div>
@@ -93,7 +93,7 @@
     </div>
 
     <div>
-        <iframe height="500px" width="500px" class="contenedor-iframe" src="bienvenida.php" frameborder="0" name="iframedash"></iframe>
+        <iframe class="contenedor-iframe" src="bienvenida.php" frameborder="0" name="iframedash"></iframe>
     </div>
 
     <script>
