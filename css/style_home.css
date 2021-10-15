@@ -1,56 +1,85 @@
-/* Globales */
 
-:root { 
-    --primario: #282C35;
-    --secundario: #DBD3D8;
-    --azul: #004BA8;
-    --celeste: #66A8B6;
-    --fondo-actual: #11101d;
-    --header: #181C24;
-    --background: #282C35;
-    --hover: #484F5F;
-    --lightgrey: #DBD3D8;
-    --color-title-buttons: #00D4EB;
-    --title: 'Audiowide', cursive;
-    --text: 'Poppins', sans-serif;
-    --console: 'Roboto Mono', monospace;
-    --tourney: 'Tourney', cursive;
-    --verde: #00a82d;
-}
-html{
-    font-size: 62.5%;
-    box-sizing: border-box;
-}
-a{
-    text-decoration: none;
-    font-size: 2rem;
-}
-h1{
-    font-size: 4.8rem;
-    display: inline;
-}
-h2{
-    font-size: 4rem;
-}
-h3{
-    font-size: 3.2rem;
-}
-h4{
-    font-size: 2.8rem;
-}
 /* Locales */
+.container {
+    position: relative;
+    background-color: var(--background);
+    min-height: calc(100vh - 70px);
+}
 
-.header{
-    height: 10rem;
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-.logoYtexto{
-    display: flex;
+    background-color: var(--fondo-actual);
+    overflow: hidden;
 }
 
-.logoimagen{
-    height: 6rem;
+.nav-bar li {
+    display: block;
+    float: right;
+    padding: 2rem;
+    font-size: 2rem;
+    font-family: var(--text);
+    transition: all .2s ease-in;
+}
+
+.nav-bar li:hover {
+    cursor: pointer;
+    background-color: var(--hover);
+}
+
+.content {
+    position: absolute;
+    inset: 50%;
+    transform: translate(-50%, -50%);
+    width: 65vw;
+    min-height: 75vh;
+    text-align: center;
+    padding: 5vw;
+    background-color: var(--fondo-actual);
+    font-family: var(--text);
+    font-size: 2.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content .title, .content p {
+    transition: all .5s ease-in;
+}
+
+.content .title {
+    font-size: 8rem;
+}
+
+.content .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn {
+    min-width: 25rem;
+}
+
+@media (min-width: 1400px) {
+    .content {
+        max-width: 910px;
+    }
+}
+
+@media (max-width: 1065px) {
+    .content .title {
+        font-size: 8vh;
+    }
+    .content p {
+        font-size: 3vh;
+    }
+}
+
+@media (min-height: 768px) {
+    .content p {
+        font-size: 2.1vh;
+    }
 }
