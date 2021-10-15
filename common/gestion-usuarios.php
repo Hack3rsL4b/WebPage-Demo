@@ -17,7 +17,7 @@ mysqli_set_charset($con,"utf8");
       rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins&family=Roboto+Mono&family=Tourney&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/style_gestion.css">
+    <link rel="stylesheet" href="../css/style_gestion1.css">
     <title>Usuarios</title>
     <script type="text/javascript">
 	   function ConfirmDelete()
@@ -60,11 +60,16 @@ mysqli_set_charset($con,"utf8");
  <div class="container"> 
     <div class="search">
         
-        <table align="center" width="429" border="0">
+        <table class="tablacs"align="center"  border="0">
           <tr>
-            <td width="664"><form class="form">
-              <input name="txtbuscar" type="text" class="form-control" title="Ingresar el Nombre o ID." size="40" placeholder="Ingresar el Nombre o ID">
-              <input type="submit" value="Buscar">     
+            <td width="664"><form class="buscador">
+              <input name="txtbuscar" type="text" class="form-control" title="Ingresar el Nombre o ID." size="40" placeholder="Ingrese el nombre o el id del usuario">
+              <input class="boton"type="submit" value="Buscar usuario">
+              <form>
+                    <a href="./gestion-usuarios.php">
+                        <input class="boton" type="submit"value="Atrás">
+                    </a>
+                </form>
           </form>
             </td>     
           </tr>
@@ -86,35 +91,43 @@ mysqli_set_charset($con,"utf8");
              }		   
       ?>
 
-<hr>
-<div class="tablecontainer">
-<div class="headertools">
+
+<div class="tablecontainer" >
+<div class="headertools" >
 <div class="tools">
 <ul>
     <li>
+    &nbsp;
+    &nbsp;
+    </li>
+    <li>
  
-    <a class=”material-icons-round” href="./Gestion de usuarios/agregarusuario.php" target="iframedash">añadir</a>
+    <a class=”material-icons-round” href="./Gestion de usuarios/agregarusuario.php" target="iframedash"> Añadir </a>
     
     </li>
     <li>
         
-    <a href="./Gestion de usuarios/modificarusuario.php" class="btn btn-warning btn-sm"  target="iframedash">Modificar</a>  
+    <a href="./Gestion de usuarios/modificarusuario.php" class="btn btn-warning btn-sm"  target="iframedash">Modificar </a>  
 
     </li>
     <li>
    
-        <a class=”material-icons-round” href="./Gestion de usuarios/eliminarusuario.php" target="iframedash">eliminar</a>
+        <a class=”material-icons-round” href="./Gestion de usuarios/eliminarusuario.php" target="iframedash">Eliminar </a>
         
     </li>
    
 </ul>
     </div>
-    
+    <div class="espacio">
+   
+
+
+    </div>
     </div>
     <table class="datatable">
         <thead>
         <tr>
-        
+        <th class="text-center">Id</th>
         <th class="text-center">Estado</th>              
         <th class="text-center">Nombre</th>
         <th class="text-center">Apellido</th>
@@ -129,7 +142,7 @@ mysqli_set_charset($con,"utf8");
                 while($fila = mysqli_fetch_array($resultado)){
                 ?>
                 <tr>
-                   
+                    <td><?php echo $fila['id_usuario'];?></td>
                     <td><?php echo $fila['estado'];?></td>
                     <td><?php echo $fila['nombre'];?></td>  
                     <td><?php echo $fila['apellido'];?></td>  

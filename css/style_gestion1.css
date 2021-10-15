@@ -34,7 +34,10 @@ body {
     height: 100%;
     color: white;
     font-size: 1.3rem;
-    background-color: var(--fondo-actual);
+    background: linear-gradient(50deg,#66a7b6c2, #11101d);
+	font-family: sans-serif;
+	font-weight: 100;
+    
    
 }
 
@@ -50,33 +53,72 @@ body {
 }
 
 
-/* Home */
-.home {
-    position: fixed;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--background);
-    display: inline;
-    font-family: var(--text);
+
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
-.material-icons{
-    font-size: 16px;
+table {
+    text-align: center;
+    align-items: center;
+	width: 800px;
+	border-collapse: collapse;
+	overflow: hidden;
+
 }
 
 .tablecontainer{
     font-family: var(--text);
-    background-color: var(--hover);
     border-radius: var(--radio);
     font-size: 12px;
-    color: var(--secundario);
-    width: 600px;
+    color: var();
+    width: 800px;
     margin: 0 auto;
     font-size: 14px;
+    max-height: 400px;
+    overflow: hidden;
+    overflow: scroll;
+    overflow-x: hidden;
+    
 }
 
 
+
+.buscador{
+    text-align: center;
+    align-items: center;
+    font-family: var(--text);
+    font-size: 12px;
+}
+.boton{
+    font-family: var(--text);
+    font-size: 12px;
+    background-color: #55608f;
+    border-radius: var(--radio);
+    padding: 3px;
+    border: 0cm;
+    color: white;
+}
+
+.form-control{
+    font-family: var(--text);
+    font-size: 12px;
+    color: white;
+    background-color:#babac09f;
+
+}
+
+
+
+.headertools{
+    text-align: center;
+    align-items: center;
+
+}
 .search{
     width: 600px;
     padding: 14px;
@@ -86,18 +128,24 @@ body {
     width: 100%;
     right: 50%;
 }
+
+
+
 .tablecontainer .headertools{
     border-bottom: solid 1px #ccccd1;
     border-radius: var(--radio);
     padding: 14px;
     display: flex;
-    align-items: baseline;
+    text-align: center;
+    background-color: #c2c3c767;
+    align-items: center;
 }
 
 .tablecontainer .headertools .search{
    width: 30%;
 
 }
+
 
 .tablecontainer .headertools .search-input{
     width: 100%;
@@ -113,6 +161,9 @@ body {
 
  .tablecontainer .headertools .tools{
     width: 70%;
+    align-items: center;
+    justify-content: center;
+
  
  }
  
@@ -121,20 +172,34 @@ body {
    padding: 0;
    display: flex;
    justify-content: start;
-   align-items: baseline;
+   align-items: center;
  
  }
 
  .tablecontainer .headertools .tools ul li{
     display: inline-block;
     margin: 0 var(--padxs);
-    align-items: baseline;
+    align-items: center;
   
   }
+
+  .th, td {
+      padding: 10px;
+      background-color: rgba(110, 138, 138, 0.267);
+      color: #fff;
+  }
+  
+  .th {
+      text-align: center;
+  }
+  
+
  
 .tablecontainer .datatable{
     border-collapse: collapse;
     width: 100%;
+    align-items: center;
+    text-align: center;
     
 }
 
@@ -146,21 +211,87 @@ body {
 
 .tablecontainer .datatable th{
     font-weight: bolder;
-    text-align: left;
+    text-align: center;
     border-bottom: solid 1px #ccccd1;
 }
 
 .tablecontainer .datatable td{
     border-bottom: solid 1px #ccccd1;
+    text-align: justify;
+}
+.tablecontainer .datatable th{
+    border-bottom: solid 1px #ccccd1;
+    background-color: #55608f85;
+    
 }
 
 .tablecontainer .datatable tbody tr:nth-child(even){
-background-color: var(--primario);
+background-color: #55608f85;
 }
 
 .tablecontainer .datatable tbody tr:hover{
-    background-color: #35423d;
+    background-color:#2058199c;
     }
+
+
+
+
+
+
+.lista {
+    width: 800px;
+    height: 400px;
+    left: 500px;
+    
+}
+
+.formlista{
+    width: 370px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--text);
+    font-size: 15px;
+ 
+
+}
+
+.formlista .listauser{
+    width: 370px;
+    padding: 14px;
+    left: 500px;
+    background-color: #c2c3c767;
+}
+
+.formlista .listaseleccion {
+    font-family: var(--text);
+    font-size: 15px;
+}
+
+.listaseleccion {
+    font-family: var(--text);
+    font-size: 12px;
+}
+
+.inputmod{
+    font-family: var(--text);
+    font-size: 12px;
+    background-color: #25353abe;
+    color: white;
+    border-radius: var(--radio);
+    
+}
+
+.tdclass{
+    font-family: var(--text);
+    font-size: 15px;
+    font-weight: 1000;
+    color: #2c1d81;
+}
+
+
+
 
 
 

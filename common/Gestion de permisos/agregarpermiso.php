@@ -19,7 +19,7 @@ mysqli_set_charset($con,"utf8");
       rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins&family=Roboto+Mono&family=Tourney&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/style_gestion.css">
+	<link rel="stylesheet" href="../../css/style_gestion1.css">
 
 </head>
 
@@ -47,11 +47,18 @@ mysqli_set_charset($con,"utf8");
   <form method="post" action="insertar.php">
    <fieldset>
    <legend>
-   <h2>Gestión de Pefiles de Usuarios</h2></legend>     
-			<div class="col-md-6 login-do1 animated wow fadeInLeft" data-wow-delay=".5s">
+   <h2>Gestión de Permisos</h2></legend>  
+   
+   <div class="col-md-6 login-do1 animated wow fadeInLeft" data-wow-delay=".5s">
 				<div class="login-mail">
-				<p>ACTIVIDAD: 
-				    <label for="cid"></label>
+   <table width="636" border="0">
+      <input class="inputmod"name="cid" type="text" id="cid" size="45"  hidden="true" value="<?php echo $fila['id_usuario'];?>"/>
+      <tr>
+      </tr>
+      <tr>
+      <td class="tdclass">ACTIVIDAD: </td>
+	  <td>
+	  <label for="cid"></label>
 					<select  id="cid" name="cid">
 					<option value="0">Seleccione:</option>
 					<?php
@@ -62,9 +69,13 @@ mysqli_set_charset($con,"utf8");
 					}
 					?>
 				</select>
-				  </p>
-				  <p>ROL:
-				    <label for="crol"></label>
+	  </td>
+      </tr>
+       <tr>
+        <td class="tdclass">PERFIL: </td>
+        <td>
+		
+		<label for="crol"></label>
 					<select  id="crol" name="crol">
 					<option value="0">Seleccione:</option>
 					<?php
@@ -75,17 +86,18 @@ mysqli_set_charset($con,"utf8");
 					}
 					?>
 				</select>
-				  </p>
-
+		</td>
+      </tr>
+	  <tr>
+        
+      <tr>
+        <td>	<input class="boton "type="submit" value="Enviar"></td> 
+		<td>
+		</td>
+      </tr>
+    </table>
         </div>
-			<div class="col-md-6 login-do animated wow fadeInRight" data-wow-delay=".5s">
-				<label class="hvr-sweep-to-top login-sub">
-					<input type="submit" value="Enviar">
-					</label>
-					<p>&nbsp;</p>
-</div>
-			<div class="clearfix"> </div>
-            </fieldset>
+			
 			</form>
             
            

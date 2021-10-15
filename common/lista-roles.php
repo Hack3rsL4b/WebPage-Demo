@@ -17,7 +17,8 @@ mysqli_set_charset($con,"utf8");
       rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins&family=Roboto+Mono&family=Tourney&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/style_gestion.css">
+    <link rel="stylesheet" href="../css/style_gestion1.css">
+
     <title>Usuarios</title>
     <script type="text/javascript">
 	   function ConfirmDelete()
@@ -50,9 +51,13 @@ mysqli_set_charset($con,"utf8");
         <table align="center" width="429" border="0">
           <tr>
             <td width="664"><form class="form">
-              <input name="txtbuscar" type="text" class="form-control" title="Ingresar el Nombre o ID." size="40" placeholder="Ingresar el Nombre o ID">
-              <input type="submit" value="Buscar">     
-          </form>
+              <input name="txtbuscar" type="text" class="form-control" title="Ingresar el Nombre o el id." size="40" placeholder="Ingresar el Nombre o ID">
+              <input class="boton"type="submit" value="Buscar rol">
+              <form>
+                    <a href="./gestion-usuarios.php">
+                        <input class="boton" type="submit"value="Atrás">
+                    </a>
+                </form>
             </td>     
           </tr>
         </table>

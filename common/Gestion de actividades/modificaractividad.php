@@ -15,6 +15,7 @@ mysqli_set_charset($con,"utf8");
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="../../css/style_gestion1.css">
         <title>Listado de Clientes</title>
     <style type="text/css">
     #apDiv1 {
@@ -39,11 +40,11 @@ mysqli_set_charset($con,"utf8");
   
     
 <body>
-<form method="get" action="modificar.php" target="iframedash">
+<form class="formlista" method="get" action="modificar.php" target="iframedash">
 
 		
-<<p>Usuario:
-<select  id="cid" name="cid">
+<p class="listauser" >Actividad:
+<select  id="id" name="id" class="listaseleccion">
         <option value="0">Seleccione:</option>
                 
 
@@ -59,8 +60,12 @@ mysqli_set_charset($con,"utf8");
  
                   
       </select>
-      
-        <input type="submit" value="enviar">                         
+      <input class="boton" type="submit" value="enviar"> 
+        <form>
+                    <a href="./gestion-usuarios.php">
+                        <input class="boton" type="submit"value="Atrás">
+                    </a>
+                </form>                         
                 <?php 
 				
 				

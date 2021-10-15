@@ -19,7 +19,8 @@ mysqli_set_charset($con,"utf8");
       rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins&family=Roboto+Mono&family=Tourney&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/style_gestion.css">
+    <link rel="stylesheet" href="../../css/style_gestion1.css">
+
 
 </head>
 
@@ -47,36 +48,50 @@ mysqli_set_charset($con,"utf8");
   <form method="post" action="insertar.php">
    <fieldset>
    <legend>
-   <h2>Gestión de Pefiles de Usuarios</h2></legend>     
-			<div class="col-md-6 login-do1 animated wow fadeInLeft" data-wow-delay=".5s">
-				<div class="login-mail">
-				<p>ID: 
-				    <label for="cid"></label>
-				    <input name="cid" type="text" id="cid" size="60">
-				  </p>
-				  <p>ACTIVIDAD:
-				    <label for="cactividad"></label>
-				    <input name="cactividad" type="text" id="cactividad" size="35" required>
-				  </p>
-				  <p>DESCRIPCIÓN:
-				    <label for="cdescripcion"></label>
-				    <input name="cdescripcion" type="text" id="cdescripcion" size="35">
-				  </p>
-				  <p>ENLACE:
-				    <label for="enlace"></label>
-				    <input name="enlace" type="text" id="enlace" size="35">
-				  </p>
-				  <p>&nbsp;</p>
-        </div>
-			<div class="col-md-6 login-do animated wow fadeInRight" data-wow-delay=".5s">
-				<label class="hvr-sweep-to-top login-sub">
-					<input type="submit" value="Enviar">
-					</label>
-					<p>&nbsp;</p>
-</div>
-			<div class="clearfix"> </div>
-            </fieldset>
-			</form>
+   <h2>Gestión de Actividades</h2></legend>  
+   
+   <div class="col-md-6 login-do1 animated wow fadeInLeft" data-wow-delay=".5s">
+   
+   <table width="636" border="0">
+      <tr>
+      </tr>
+	  <td class="tdclass">ID: </td>
+        <td>
+		<label for="cid"></label>
+		 <input class="inputmod" name="cid" type="text" id="cid" size="35">
+		</td>
+      <tr>
+        <td class="tdclass">ACTIVIDAD: </td>
+       <td>
+	   <label for="cactividad"></label>
+		 <input class="inputmod" name="cactividad" type="text" id="cactividad" size="35" required>
+	   </td>
+      </tr>
+      <tr>
+        <td class="tdclass">DESCRIPCIÓN: </td>
+	   <td>
+	   <label for="cdescripcion"></label>
+		<input class="inputmod" name="cdescripcion" type="text" id="cdescripcion" size="35">
+	   </td>
+      </tr>
+      <tr>
+      <td class="tdclass">ENLACE: </td>
+	 
+	  <td>
+	  <label for="enlace"></label>
+	  <input class="inputmod" name="enlace" type="text" id="enlace" size="35">
+	  </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td>	<input class="boton "type="submit" value="Añadir actividad"></td> 
+		<td>
+		</td>
+      </tr>
+	
+    </table> 
+</form>
             
            
 

@@ -15,35 +15,17 @@ mysqli_set_charset($con,"utf8");
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <title>Listado de Clientes</title>
-    <style type="text/css">
-    #apDiv1 {
-	position:absolute;
-	left:261px;
-	top:73px;
-	width:752px;
-	height:32px;
-	z-index:1;
-}
-    #apDiv2 {
-	position:absolute;
-	left:15px;
-	top:106px;
-	width:230px;
-	height:26px;
-	z-index:2;
-}
-    </style>
+        <link rel="stylesheet" href="../../css/style_gestion1.css">
+        <title>Listado de permisos</title>
     
     
   
-    
 <body>
-<form method="get" action="modificar.php" target="iframedash">
+<form class="formlista" method="get" action="modificar.php" target="iframedash">
 
 		
-<<p>Usuario:
-<select  id="cid" name="cid">
+<p class="listauser">Permiso:
+<select  id="cid" name="cid" class="listaseleccion">
         <option value="0">Seleccione:</option>
                 
 
@@ -63,7 +45,12 @@ mysqli_set_charset($con,"utf8");
                   
       </select>
       
-        <input type="submit" value="enviar">                         
+      <input class="boton" type="submit" value="enviar"> 
+        <form>
+                    <a href="./gestion-usuarios.php">
+                        <input class="boton" type="submit"value="Atrás">
+                    </a>
+                </form>              
                 <?php 
 				
 				

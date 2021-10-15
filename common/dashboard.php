@@ -18,7 +18,7 @@
     include_once("../php/conexion.php");
     include_once("../php/obtener-usuario.php");
 
-    $pwd = isset($_GET['pwd']) ? $_GET['pwd'] : '';
+    $id = isset($_GET['id']) ? $_GET['id'] : '';
 
     $consulta = "SELECT
     $bd.actividades.id_actividad AS id,
@@ -33,7 +33,7 @@
     $bd.permisos.rol = $bd.roles.id_rol AND
     $bd.permisos.actividad = $bd.actividades.id_actividad AND
     $bd.roles.id_rol = $bd.usuarios.roles_id_rol AND
-    $bd.usuarios.contrasenia = '$pwd';";
+    $bd.usuarios.id_usuario = '$id';";
 
     $resultado = mysqli_query($con, $consulta) or die(mysqli_error($con));
 
@@ -48,15 +48,12 @@
                 </a>
             </div>
 
-            <div class="inciarsesion">
-                <a href="./inicio-sesion.php" class="registro">Registrate</a>
-                <a href="./inicio-sesion.php" class="inicio">Iniciar Sesión</a>
-            </div>
+            
         </div>
     </header>
 
-    <div class="barra" >
-        <ul class="linknav" style="height:85%; overflow: scroll;">
+    <div class="barra">
+        <ul class="linknav" >
             <?php
             while ($fila = mysqli_fetch_array($resultado)) {
                 $destino = $fila['enlace'] . '?id=' . $fila['id'];
@@ -78,14 +75,16 @@
 
             <li>
                 <div class="perfil">
-                    <div class="perfil-contenido">
-                        <img src="../img/perfil.png" alt="img perfil" class="imgperfil">
-                    </div>
+                    <a href="perfil.php">
+                        <div class="perfil-contenido">
+                            <img src="../img/perfil.png" alt="img perfil" class="imgperfil">
+                        </div>
 
-                    <div class="perfil-info">
-                        <div class="nombre-perfil"><?php echo $nombre_usuario ?></div>
-                        <div class="rol"><?php echo $rol ?></div>
-                    </div>
+                        <div class="perfil-info">
+                            <div class="nombre-perfil"><?php echo $nombre_usuario ?></div>
+                            <div class="rol"><?php echo $rol ?></div>
+                        </div>
+                    </a>
                     <a href="../php/cerrar.php"><i class='bx bx-log-out'></i></a>
                 </div>
             </li>
@@ -93,7 +92,7 @@
     </div>
 
     <div>
-        <iframe class="contenedor-iframe" src="bienvenida.php" frameborder="0" name="iframedash"></iframe>
+        <iframe height="500px" width="500px" class="contenedor-iframe" src="bienvenida.php" frameborder="0" name="iframedash"></iframe>
     </div>
 
     <script>
