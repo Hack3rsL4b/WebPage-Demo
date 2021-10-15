@@ -19,11 +19,7 @@
         <div class="cuerpo">
             <span class="welcome">Bienvenidos al</span>
             <h2 class="title-home">Semillero de investigación de Seguridad Informática</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laboriosam consequatur odit, alias
-                eaque doloribus. Nobis velit veritatis ullam quo nulla mollitia perspiciatis in earum eligendi ipsum,
-                autem ipsam quae! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, dignissimos quo.
-            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laboriosam consequatur odit, alias eaque doloribus. Nobis velit veritatis ullam quo nulla mollitia perspiciatis in earum eligendi ipsum, autem ipsam quae! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, dignissimos quo. Eligendi labore ut nostrum fugit eum quibusdam quaerat amet nemo deleniti autem cum voluptates eveniet temporibus, excepturi pariatur porro!</p>
             <a href="#" class="boton conoce-mas">Conoce más</a>
         </div>
     </div>
