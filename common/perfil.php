@@ -21,12 +21,12 @@
 
 <body>
 <?php
-    $usuario = isset($_GET['cusuario']) ? $_GET['cusuario'] : '';
-    $consulta = "SELECT * FROM $bd.usuarios WHERE usuario = '$usuario'";
+    $id1 = isset($_GET['id']) ? $_GET['id'] : '';
+    $consulta = "SELECT * FROM $bd.usuarios WHERE id_usuario = '$id1'";
     $resultado = mysqli_query($con, $consulta) or die(mysqli_error($con));
 ?>
     <div class="flexperfil">
-        <dic class="gridperfil">
+        <dic class="gridperfil">d
             <div class="img-perfil">
                 <div class="opacidad">
                     <div class="perfil-imgnom">
@@ -44,6 +44,8 @@
             <div class="contenedor-perfil">
             
                 <form action="perfil.php" method="post">
+                <label for="cid"></label>
+                <input name="cid" type="text" id="cid" size="45"  hidden="true" value="<?php echo $id_usuario?>"/>
 
                     <div class="perfil-g2">
                         <div class="perfil-gnombre perfil-g">
@@ -62,7 +64,7 @@
                         </div>
 
                         <div class="perfil-gcon perfil-g">
-                            <label for="cclave">Constraseña</label>
+                            <label for="cclave">Contraseña</label>
                             <input id="cclave" required name="cclave" value="<?php echo $contraseniab;?>" class="campo-inputp" type="text">
                         </div>
 
@@ -94,8 +96,8 @@
 <?php
 //1. Crear el proceso de actualización de los ddatos
 //2. Toma los datos provenientes del Formulario y posteriormente los asigna a los campos de tabla en la Base de Datos
-   
-  $nusuario = isset($_POST['cuser']) ? $_POST['cuser'] : '';
+  $id1 = isset($_POST['cid']) ? $_POST['cid'] : '';
+  $usuario = isset($_POST['cuser']) ? $_POST['cuser'] : '';
   $nclave = isset($_POST['cclave']) ? $_POST['cclave'] : '';
   $nnombre = isset($_POST['cnombre']) ? $_POST['cnombre'] : '';
   $napellido = isset($_POST['capellido']) ? $_POST['capellido'] : '';
@@ -103,13 +105,13 @@
   $nemail = isset($_POST['cemail']) ? $_POST['cemail'] : '';
      	
 	
-    if( $nnombre !=null && $napellido !=null && $nusuario !=null && $nclave !=null&& $ntelefono !=null&& $nemail !=null){  
+    if( $nnombre !=null && $napellido !=null && $usuario !=null && $nclave !=null&& $ntelefono !=null&& $nemail !=null){  
             
-    $modificar="UPDATE $bd.usuarios SET  contrasenia = '$nclave', nombre='$nnombre', apellido = '$napellido',
-    telefono = '$ntelefono', email = '$nemail'  WHERE usuario='$nusuario'";
+    $modificar="UPDATE $bd.usuarios SET  usuario = '$usuario',contrasenia = '$nclave', nombre='$nnombre', apellido = '$napellido',
+    telefono = '$ntelefono', email = '$nemail'  WHERE id_usuario='$id1'";
     $resultado= mysqli_query($con, $modificar);
 
-    header("location:perfil.php");	
+    header("location: ../common/dashboard.php?id=$id1");	
     }
 
     mysqli_close($con);

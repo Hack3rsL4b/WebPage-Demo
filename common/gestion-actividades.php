@@ -16,7 +16,7 @@ mysqli_set_charset($con,"utf8");
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins&family=Roboto+Mono&family=Tourney&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/style_gestion.css">
+    <link rel="stylesheet" href="../css/style_gestion1.css">
     <title>Usuarios</title>
     <script type="text/javascript">
      function ConfirmDelete()
@@ -54,11 +54,16 @@ mysqli_set_charset($con,"utf8");
  <div class="container"> 
     <div class="search">
         
-        <table align="center" width="429" border="0">
+        <table class="tablacs" align="center" width="429" border="0">
           <tr>
             <td width="664"><form class="form">
               <input name="txtbuscar" type="text" class="form-control" title="Ingresar la actividad o ID." size="40" placeholder="Ingresar el Nombre o ID">
-              <input type="submit" value="Buscar">     
+              <input class="boton" type="submit" value="Buscar Activididad">   
+              <form>
+                    <a href="./gestion-usuarios.php">
+                        <input class="boton" type="submit"value="Atrás">
+                    </a>
+                </form>  
           </form>
             </td>     
           </tr>
@@ -84,7 +89,7 @@ mysqli_set_charset($con,"utf8");
           
           
           
-<hr>
+
 <div class="tablecontainer">
 <div class="headertools">
 <div class="tools">

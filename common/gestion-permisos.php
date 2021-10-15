@@ -17,7 +17,7 @@ mysqli_set_charset($con,"utf8");
       rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins&family=Roboto+Mono&family=Tourney&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/style_gestion.css">
+    <link rel="stylesheet" href="../css/style_gestion1.css">
     <title>Usuarios</title>
   <script type="text/javascript">
 	   function ConfirmDelete()
@@ -54,9 +54,13 @@ mysqli_set_charset($con,"utf8");
         <table align="center" width="429" border="0">
           <tr>
             <td width="664"><form class="form">
-              <input name="txtbuscar" type="text" class="form-control" title="Ingresar la actividad o ID." size="40" placeholder="Ingresar el Nombre o ID">
-              <input type="submit" value="Buscar">     
-          </form>
+              <input name="txtbuscar" type="text" class="form-control" title="Ingrese la actividad o id de perfil." size="40" placeholder="Ingrese el N° de actividad o id de perfil">
+              <input class="boton"type="submit" value="Buscar permiso">
+              <form>
+                    <a href="./gestion-usuarios.php">
+                        <input class="boton" type="submit"value="Atrás">
+                    </a>
+                </form>
             </td>     
           </tr>
         </table>
@@ -68,7 +72,10 @@ mysqli_set_charset($con,"utf8");
         $buscar = isset($_GET['txtbuscar']) ? $_GET['txtbuscar'] : '';
     
     if($buscar!=null){
-    $consulta="SELECT * FROM $bd.actividades WHERE id LIKE"."'%".$buscar."%' OR actividad LIKE"."'%".$buscar."%' ";
+        $consulta="SELECT a.actividad AS actividad,
+        p.actividad AS  pactividad, 
+        p.rol AS rol 
+        FROM actividades AS a inner join permisos AS p on a.id_actividad = p.actividad WHERE p.rol LIKE"."'%".$buscar."%' OR a.actividad LIKE"."'%".$buscar."%' ";
         
     
     $resultado = mysqli_query($con,$consulta) or die(mysqli_error($con));
@@ -81,7 +88,6 @@ mysqli_set_charset($con,"utf8");
           
           
           
-<hr>
 <div class="tablecontainer">
 <div class="headertools">
 <div class="tools">

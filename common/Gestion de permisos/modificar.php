@@ -15,24 +15,9 @@ mysqli_set_charset($con,"utf8");
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <title>Perfiles</title>
-    <style type="text/css">
-    #apDiv1 {
-	position:absolute;
-	left:268px;
-	top:469px;
-	width:99px;
-	height:29px;
-	z-index:1;
- 
-}
+        <link rel="stylesheet" href="../../css/style_gestion1.css">
+        <title>Permisos</title>
 
-body{
-
-  background: #EBE9E0;
-}
-
-    </style>
     </head>
 <body>
         <?php
@@ -63,18 +48,18 @@ body{
     <center>
       
       <table width="636" border="0">
-      <input name="cid" type="text" id="cid" size="45"  hidden="true" value="<?php echo $fila['actividad'];?>"/>
+      <input class="inputmod" name="cid" type="text" id="cid" size="45"  hidden="true" value="<?php echo $fila['actividad'];?>"/>
       <tr>
 
         <td>ACTIVIDAD: </td>
         <td><label for="cactividad"></label>
-        <input name="cactividad" type="text" id="cactividad" size="45" value="<?php echo $fila['actividad'];?>" /></td>
+        <input class="inputmod" name="cactividad" type="text" id="cactividad" size="45" value="<?php echo $fila['actividad'];?>" /></td>
       </tr>
       <tr>
         <td>ROL: </td>
         <td><label for="crol"></label>
         <label for="crol"></label>
-					<select  id="crol" name="crol">
+					<select class="listaseleccion" id="crol" name="crol">
 					<option value="0">Seleccione:</option>
 					<?php
 					$consulta="SELECT * FROM roles";
@@ -85,8 +70,10 @@ body{
 					?>
       </tr>
       <tr>
-        <td><input type="submit" name="actualizar" id="button" value="Actualizar" /></td> 
-       
+        <td><input class="boton"  type="submit" name="actualizar" id="button" value="Actualizar" /></td> 
+       <td>
+         
+       </td>
       </tr>
     </table>
       <p>&nbsp;</p>

@@ -15,24 +15,9 @@ mysqli_set_charset($con,"utf8");
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="../../css/style_gestion1.css">
         <title>Perfiles</title>
-    <style type="text/css">
-    #apDiv1 {
-	position:absolute;
-	left:268px;
-	top:469px;
-	width:99px;
-	height:29px;
-	z-index:1;
- 
-}
-
-body{
-
-  background: #EBE9E0;
-}
-
-    </style>
+    
     </head>
 <body>
         <?php
@@ -63,53 +48,53 @@ body{
     <center>
       
       <table width="636" border="0">
-      <input name="cid" type="text" id="cid" size="45"  hidden="true" value="<?php echo $fila['id_usuario'];?>"/>
+      <input class="inputmod"name="cid" type="text" id="cid" size="45"  hidden="true" value="<?php echo $fila['id_usuario'];?>"/>
       <tr>
-      <td>ID: </td>
+      <td class="tdclass">ID: </td>
         <td><label for="cid"></label>
-        <input name="cid" type="text" id="cid" size="45" value="<?php echo $fila['id_usuario'];?>" disabled /></td>
+        <input class="inputmod"name="cid" type="text" id="cid" size="45" value="<?php echo $fila['id_usuario'];?>" disabled /></td>
       </tr>
       <tr>
-      <td>USUARIO: </td>
+      <td class="tdclass">USUARIO: </td>
         <td><label for="cuser"></label>
-        <input name="cuser" type="text" id="cuser" size="45" value="<?php echo $fila['usuario'];?>"  /></td>
+        <input class="inputmod"name="cuser" type="text" id="cuser" size="45" value="<?php echo $fila['usuario'];?>"  /></td>
       </tr>
        <tr>
-        <td>CONTRASEÑA: </td>
+        <td class="tdclass">CONTRASEÑA: </td>
         <td><label for="cclave"></label>
-        <input name="cclave" type="text" id="cclave" size="45" value="<?php echo $fila['contrasenia'];?>" /></td>
+        <input class="inputmod"name="cclave" type="text" id="cclave" size="45" value="<?php echo $fila['contrasenia'];?>" /></td>
       </tr>
       <tr>
-        <td>NOMBRE: </td>
+        <td class="tdclass">NOMBRE: </td>
         <td><label for="cnombre"></label>
-        <input name="cnombre" type="text" id="cnombre" size="45" value="<?php echo $fila['nombre'];?>" /></td>
+        <input class="inputmod"name="cnombre" type="text" id="cnombre" size="45" value="<?php echo $fila['nombre'];?>" /></td>
       </tr>
       <tr>
-        <td>APELLIDO: </td>
+        <td class="tdclass">APELLIDO: </td>
         <td><label for="capellido"></label>
-        <input name="capellido" type="text" id="capellido" size="45" value="<?php echo $fila['apellido'];?>" /></td>
+        <input class="inputmod" name="capellido" type="text" id="capellido" size="45" value="<?php echo $fila['apellido'];?>" /></td>
       </tr>
       <tr>
-        <td>TELEFONO: </td>
+      <td class="tdclass">TELEFONO: </td>
         <td><label for="ctelefono"></label>
-        <input name="ctelefono" type="text" id="ctelefono" size="45" value="<?php echo $fila['telefono'];?>" /></td>
+        <input  class="inputmod" name="ctelefono" type="text" id="ctelefono" size="45" value="<?php echo $fila['telefono'];?>" /></td>
       </tr>
       <tr>
-        <td>EMAIL: </td>
+      <td class="tdclass">EMAIL: </td>
         <td><label for="cemail"></label>
-        <input name="cemail" type="text" id="cemail" size="45" value="<?php echo $fila['email'];?>" /></td>
+        <input class="inputmod" name="cemail" type="text" id="cemail" size="45" value="<?php echo $fila['email'];?>" /></td>
       </tr>
       <tr>
-      <td>ESTADO:
-      <td><select name="cestado" required>
+      <td class="tdclass">ESTADO:
+      <td><select class="listaseleccion" name="cestado" required>
 					<option value="ACTIVO">Activo</option> 
 					<option value="INACTIVO">Inactivo</option>  
 					</select></td>
           </td>
           <tr>   
-        <td>PERFIL: </td>
-        <td><label for="cperfil"></label>
-        <select  id="cperfil" name="cperfil">
+          <td class="tdclass">PERFIL: </td>
+        <td ><label for="cperfil"></label>
+        <select  class="listaseleccion" id="cperfil" name="cperfil">
 					<option value="0">Seleccione:</option>
 					<?php
 					$consulta="SELECT * FROM roles";
@@ -123,8 +108,8 @@ body{
       <tr>
         
       <tr>
-        <td><input type="submit" name="actualizar" id="button" value="Actualizar" /></td> 
-       
+        <td><input class="boton" type="submit" name="actualizar" id="button" value="Actualizar" /></td> 
+        <td> </td>
       </tr>
     </table>
       <p>&nbsp;</p>
