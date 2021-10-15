@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins&family=Roboto+Mono&family=Tourney&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" href="../img/icon.png">
+    <link rel="icon" href="../img/iconNoBackground.png">
     <title>Hack3rs L4b</title>
 </head>
 
@@ -42,13 +42,14 @@
     <header>
         <div class="header">
             <div class="logo">
-                <a href="index.html">
+                <a href="../">
                     <img src="../img/iconNoBackground.png" alt="ImagenLogo" class="ilogo">
                     <h1 class="nombre">Hack3rs <span>L4b</span></h1s>
                 </a>
             </div>
-
-            
+            <div class="inciarsesion">
+                <a href="../php/cerrar.php" class="inicio">Cerrar sesión</a>
+            </div>
         </div>
     </header>
 

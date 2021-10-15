@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/style_home.css">
     <link rel="icon" href="./img/iconNoBackground.png">
@@ -17,9 +18,15 @@
 <body>
 
     <nav class="nav-bar">
+        <div class="icons">
+            <a href="#" target="_blank" class="logotipos"><i class='bx bx-envelope' style='color:#ffffff'></i></a>
+            <a href="#" target="_blank" class="logotipos"><i class='bx bxl-youtube' style='color:#ffffff'></i></a>
+            <a href="https://github.com/Hack3rsL4b" target="_blank" class="logotipos"><i class='bx bxl-github' style='color:#ffffff'></i></a>
+        </div>
         <ul>
-            <a href="./common/inicio-sesion.php"><li>Iniciar sesión</li></a>
-            <a href="./common/dashboard.php"><li>Continuar</li></a>
+            <a href="./common/inicio-sesion.php">
+                <li>Iniciar sesión</li>
+            </a>
         </ul>
     </nav>
 
