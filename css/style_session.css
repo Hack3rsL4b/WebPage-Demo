@@ -2,9 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins&family=Tourney&display=swap');
 
 /* Globales */
-
-
-
 :root { 
     --primario: #282C35;
     --secundario: #DBD3D8;
@@ -22,7 +19,17 @@
     --tourney: 'Tourney', cursive;
     --verde: #00a82d;
 }
-
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    height: 100%;
+}
+*,*:after,*:before{
+    box-sizing: inherit ;
+}
+button{
+    font-size: 1.35rem;
+}
 * {
     margin: 0;
     padding: 0;
@@ -30,71 +37,77 @@
     font-size: 12px;
 
 }
-
-.container_session{
-    width:100%;
+body{
     height: 100%;
     background-color: var(--background);
-    background-position: center;
-    background-size: cover;
-    position:absolute;
+
+}
+.contenedorflex{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.box-img{
-    width: 370px;
-    height: 455px;
-    right: 52%;
-    position:relative;
-    margin: 6% auto;
+.container_session{
+    display: grid;
+    grid-template-columns: 37rem 37rem;
+}
+
+.group1{
+    width: 37rem;
+    height: 45.5rem;
     background-image: url(../img/fondo.png);
-    padding: 5px;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 1rem 0 0 1rem;
     float: right;
 }
 
 .atras img{
-    margin: 30px 0px 0px 5px;
-    width: 20px;
+    margin: 3rem 0 0 3rem;
+    width: 2rem;
     float: left;
+}
+.atras{
+    text-decoration: none;
+    color: darkblue;
 }
 
 .toogle-btnatras{
-    margin: 30px 0px 0px 10px;
+    margin: 3rem 0 0 1rem;
     cursor: pointer;
     background:transparent;
-    border: 0px;
+    border: 0;
     outline: none;
     position: relative;
     float: left;
 }
 
-.form-box{
-    width: 370px;
-    height: 455px;
+.group2{
+    width: 37rem;
+    height: 45.5rem;
     position:relative;
-    margin: 6% auto;
     background-color: #ffff;
-    padding: 5px;
-    border-radius: 0px 10px 10px 0px;
+    padding: .5rem;
+    border-radius: 0 1rem 1rem 0;
     overflow:hidden;
     float: right;
 }
 
 
 
-.button-box{
-    width: 240px;
-    margin: 30px auto;
+.btngroup{
+    width: 25rem;
+    margin: 3rem auto 0 auto;
     position: relative;
-    box-shadow: 0 0 20px 9px #e0e0e0;
-    border-radius: 1.875rem;
+    box-shadow: 0 0 2rem .9rem #e0e0e0;
+    border-radius: 3rem;
 }
 
 .toogle-btn{
-    padding: 10px 22px;
+    padding: 1rem 2.2rem;
     cursor: pointer;
     background:transparent;
-    border: 0px;
+    border: 0;
     outline: none;
     position: relative;
 }
@@ -103,31 +116,32 @@
     top:0;
     left:0;
     position: absolute;
-    width: 120px;
+    width: 13rem;
     height: 100%;
     background: linear-gradient(to right,#00D4EB,#00a82daf);
-    border-radius:30px;
+    border-radius:3rem;
     transition: 0.8s;
 }
 
 .input-group{
-    top: 110px;
+    top: 10rem;
     position: absolute;
-    width: 280px;
+    width: 28rem;
     transition: 0.8s;
 }
 
 .input-group1{
-    top: 105px;
+    top: 8rem;
     position: absolute;
     width: 280px;
     transition: 0.8s;
 }
 
 .input-field{
+    font-size: 1.5rem;
     width: 100%;
-    padding: 10px 0px;
-    margin: 5px 0px;
+    padding: 1rem 0;
+    margin: .5rem 0;
     border-left: 0;
     border-top: 0;
     border-right: 0;
@@ -136,25 +150,28 @@
     background: transparent;
 }
 
-.logo-hack{   
+.logo{   
+    margin-top: -2rem;
     text-align: center;
 }
 
-.logo-hack img{
-    width: 150px;
+.logo img{
+    width: 15rem;
 }
 .submit-btn{
     width: 85%;
     padding: 0.625rem 1.875rem;
     cursor: pointer;
     display: block;
-    margin: auto;
+    margin: 1.5rem auto 0 auto;
     background: linear-gradient(to right,#00D4EB,#00a82daf);
     border: 0rem;
     outline: none;
     border-radius: 1.875rem;
 }
-
+.sbtn{
+    margin: 1rem auto 0 auto;
+}
 
 
 .check-box{
@@ -163,15 +180,15 @@
 
 .span{
     color:#11101d;
-    font-size: 12px;
-    bottom: 64px;
+    font-size: 1.2rem;
+    bottom: 6.4rem;
     position: absolute;
 }
 
 #login{
-    left: 50px;
+    left: 5rem;
 }
 
 #registrar{
-    left: 430px;
+    left: 43rem;
 }
