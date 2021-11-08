@@ -26,7 +26,7 @@
     $resultado = mysqli_query($con, $consulta) or die(mysqli_error($con));
 ?>
     <div class="flexperfil">
-        <dic class="gridperfil">d
+        <dic class="gridperfil">
             <div class="img-perfil">
                 <div class="opacidad">
                     <div class="perfil-imgnom">
@@ -111,7 +111,7 @@
     telefono = '$ntelefono', email = '$nemail'  WHERE id_usuario='$id1'";
     $resultado= mysqli_query($con, $modificar);
 
-    header("location: ../common/dashboard.php?id=$id1");	
+    header("location: ../common/perfil.php?id=$id1");	
     }
 
     mysqli_close($con);
