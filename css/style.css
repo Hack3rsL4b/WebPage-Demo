@@ -649,3 +649,33 @@ li {
     display: flex;
     justify-content: center;
 }
+/* Eventos */
+.flex-eventos{
+    background-color: var(--background);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5.5rem;
+    font-family: var(--text);
+}
+.titulo-eventos{
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.eventos-contenedor{
+    height: 80%;
+    width: 40rem;
+}
+.span-eventos{
+    font-weight: bold;
+}
+.lista-eventos{
+    text-align: center;
+}
+.opc-lista-eventos{
+    background-color: var(--hover);
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+}

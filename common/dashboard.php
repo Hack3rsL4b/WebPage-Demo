@@ -92,7 +92,7 @@
     </div>
 
     <div>
-        <iframe height="500px" width="500px" class="contenedor-iframe" src="bienvenida.php" frameborder="0" name="iframedash"></iframe>
+        <iframe class="contenedor-iframe" src="bienvenida.php" frameborder="0" name="iframedash"></iframe>
     </div>
 
     <script>
