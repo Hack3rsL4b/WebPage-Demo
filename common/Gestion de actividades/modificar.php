@@ -27,7 +27,7 @@ mysqli_set_charset($con,"utf8");
 		 
 		 $consulta="SELECT * FROM $bd.actividades WHERE id_actividad = '$id1'";
 		
-         $resultado = mysqli_query($con,$consulta) or die(mysqli_error($con));
+         $resultado = mysqli_query($con,$consulta) or die(mysql_error());
 		       
         ?>
         <div class="container"> 

@@ -63,7 +63,7 @@ mysqli_set_charset($con,"utf8");
 					<option value="0">Seleccione:</option>
 					<?php
 					$consulta="SELECT * FROM actividades";
-					$resultado = mysqli_query($con,$consulta) or die(mysqli_error($con));
+					$resultado = mysqli_query($con,$consulta) or die(mysql_error());
 					while ($fila = mysqli_fetch_array($resultado)) {
 					echo '<option value="'.$fila['id_actividad'].'">'.$fila['actividad'].'</option>';
 					}
@@ -80,7 +80,7 @@ mysqli_set_charset($con,"utf8");
 					<option value="0">Seleccione:</option>
 					<?php
 					$consulta="SELECT * FROM roles";
-					$resultado = mysqli_query($con,$consulta) or die(mysqli_error($con));
+					$resultado = mysqli_query($con,$consulta) or die(mysql_error());
 					while ($fila = mysqli_fetch_array($resultado)) {
 					echo '<option value="'.$fila['id_rol'].'">'.$fila['nombre'].'</option>';
 					}
