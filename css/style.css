@@ -80,7 +80,7 @@ li {
 
 .nombre {
     font-family: var(--title);
-    font-size: 5.5rem;
+    font-size: 4rem;
 }
 
 .nombre span {
@@ -131,23 +131,6 @@ li {
     transition: all 0.5s ease;
     font-family: var(--text);
     overflow: auto;
-}
-
-.barra::-webkit-scrollbar, .home::-webkit-scrollbar {
-    width: 12px;
-    background-color: var(--fondo-actual);
-}
-
-.barra::-webkit-scrollbar-track, .home::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    border-radius: 10px;
-    background-color: rgb(8, 7, 14);
-}
-
-.barra::-webkit-scrollbar-thumb, .home::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    background-color: #555;
 }
 
 .barra .linknav {

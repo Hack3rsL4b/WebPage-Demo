@@ -20,9 +20,10 @@
             <span class="welcome">Bienvenidos al</span>
             <h2 class="title-home">Semillero de investigación de Seguridad Informática USBBOG</h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laboriosam consequatur odit, alias
-                eaque doloribus. Nobis velit veritatis ullam quo nulla mollitia perspiciatis in earum eligendi ipsum,
-                autem ipsam quae! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, dignissimos quo.
+                Semillero de investigación de la Universidad San Buenaventura sede Bogotá enfocado al análisis y 
+                creación de soluciones que solventen problemáticas sociales y empresariales con ayuda de la 
+                seguridad informática para garantizar la confidencialidad, integridad y disponibilidad en los 
+                sistemas implementados a distintas áreas como la salud, educación o administración.
             </p>
             <a href="./descripcion.php" target="iframedash" class="boton conoce-mas">Conoce más</a>
         </div>
