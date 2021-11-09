@@ -136,12 +136,8 @@ li {
 .barra .linknav {
     height: 100%;
     overflow: auto;
-    overflow: scroll;
 }
 
-.barra .linknav {
-    overflow: visible;
-}
 
 .barra .linknav li {
     position: relative;
@@ -298,6 +294,7 @@ li {
 .perfil{
     width: 29rem;
     position: fixed;
+    height: 6rem;
     bottom: 0;
     display: flex;
     align-items: center;
@@ -322,7 +319,7 @@ li {
 
 .nombre-perfil, .rol {
     color: #ffff;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     font-weight: 500;
 }
 
@@ -418,7 +415,7 @@ li {
     bottom: 0;
     display: flex;
     opacity: 0.5;
-    margin-bottom: 16rem;
+    margin-bottom: 20rem;
     margin-right: 3rem;
 }
 
@@ -436,7 +433,7 @@ li {
     border: 1px solid white;
     position: fixed;
     width: 0.1rem;
-    height: 15rem;
+    height: 20rem;
     right: 9.2rem;
     bottom: 0;
     opacity: 0.5;
@@ -449,7 +446,7 @@ li {
     bottom: 0;
     top: 11rem;
     min-width: calc(100% - 29rem);
-    height: 85%;
+    height: 100%;
     overflow: auto;
     
 }
@@ -497,10 +494,25 @@ li {
 }
 .fotoperfil{
     height: 10rem;
-    width: 10rem;
+    width: 8rem;
     background-color: rgba(0,0,0,0.3);
     backdrop-filter: blur(1rem);
     border-radius: 1.5rem;
+
+}
+
+.fotoper{
+    height:100px;
+    width: 80px;
+    border-radius: 1.5rem;
+
+}
+
+.fotoperini{
+    width: 4rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 5rem;
 
 }
 .perfil-imgnom{
@@ -576,4 +588,356 @@ li {
 .perfil-boton-enviar{
     display: flex;
     justify-content: center;
+}
+/* Contacto */
+
+.contactoback{
+    background-color: var(--background);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5.5rem;
+}
+.formulario-contacto{
+    padding: 3rem ;
+    height: 35rem;
+    width: 45rem;
+    border-radius: 1.5rem;
+    background-color: var(--hover);
+    font-family: var(--text);
+    -webkit-box-shadow: 0px 1px 13px 0px #DBD3D8; 
+    box-shadow: 0px 1px 13px 0px #DBD3D8;
+
+}
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+}
+.campo__label{
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+    height: 2rem;
+}
+
+.campo__field{
+    flex: 1;
+    border: 1px solid var(--gris);
+    height: 2.2rem;
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom:0.1rem solid var(--lightgrey);
+    color: var(--lightgrey);
+    font-size: 1.3rem;
+    text-align: center;
+}
+.campo__field--textarea{
+    height: 10rem;
+}
+.btn-contacto{
+    height: 2.5rem;
+    width: 8rem;
+    font-size: 1.5rem;
+    font-family: var(--text);
+    background-color: transparent;
+    border: 0.1rem solid var(--lightgrey);
+    border-style: solid;
+    color: var(--lightgrey);
+    border-radius: 1rem;
+    cursor: pointer;
+    background: linear-gradient(to left, var(--hover) 50%, var(--secundario) 50%) right;
+    background-size: 200%;
+    transition: .4s ease-out;
+}
+.btn-contacto:hover{
+    background-position: left;
+    color: var(--background);
+}
+.contacto-enviar-btn{
+    margin-top: 3.5rem;
+    display: flex;
+    justify-content: center;
+}
+/* Eventos */
+.flex-eventos{
+    background-color: var(--background);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5.5rem;
+    font-family: var(--text);
+}
+.titulo-eventos{
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.eventos-contenedor{
+    height: 80%;
+    width: 40rem;
+}
+.span-eventos{
+    font-weight: bold;
+}
+.lista-eventos{
+    text-align: center;
+}
+.opc-lista-eventos{
+    background-color: var(--hover);
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Integrantes */
+.bodyintegrantes{
+    background-color: var(--background);
+    background-image: url(../img/85-855588_code-protection-hacker-check-integrity-check-hacker.png);
+}
+
+.integrantes-tlb{
+    top:10%;
+    height:70%;
+    width: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+} 
+
+
+::-webkit-scrollbar-thumb {
+    background-color:var(--verde);
+    border-radius: 20px;
+    border: 2px solid #248354e7;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+
+
+.campos-integrantes{
+    height: 30rem;
+    width: 90%;
+    border-radius: 1.5rem;
+    background-color: var(--hover);
+    font-family: var(--text);
+    -webkit-box-shadow: 0px 1px 13px 0px #DBD3D8; 
+    box-shadow: 0px 1px 13px 0px #DBD3D8;
+
+}
+
+.campo__label_int{
+    flex: 0 0 9rem;
+    text-align: center;
+    align-items: center;
+    padding-right: 2rem;
+    height: 2rem;
+}
+
+.img_integrantes{
+    border-radius: 50%;
+    width: 20rem;
+    height: 20rem;
+
+}
+
+.table_int{  
+    padding-top:3rem ;
+    padding-left: 10rem;
+    
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.campo-int-first{
+    padding-top: 5rem;
+    height: 30rem;
+    width: 30rem;
+    float: left;
+    }
+    
+.campo-int-second{
+    padding-top: 1rem;
+    height: 5rem;
+    float: center;
+    color: var(--verde);
+    text-shadow: 0.1em 0.1em 0.2em black;
+    font-size: 2rem;
+
+    }
+
+.campo-int-third{
+    height: 5rem;
+    float: center;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    font-size: 1.6rem;
+    }
+
+.campo-int-fourth{
+    padding-right: 3rem;
+    height: 5rem;
+    float: center;
+    text-align: justify;
+    font-size: 1.4rem;
+    }    
+
+    .divintegrantes{
+        height: 20%;
+        width: 100%;
+        float: absolute;
+        padding-top: 3rem;
+    }    
+.titulointegrantes{
+    text-align: center;
+    font-family: var(--title);
+    font-size: 5rem;
+    color: var(--verde);
+    text-shadow: 0.1em 0.1em 0.2em rgba(17, 192, 61, 0.479);
+}
+.textointegrantes{
+    text-align: center;
+    font-family: var(--text);
+    font-size: 2rem;
+    color: var(--secundario);
+}
+
+/* Enlcances */
+.bodyenlaces{
+    background-color: var(--background);
+}
+
+
+
+.enlaces-tlb{
+    top:10%;
+    height:70%;
+    width: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+
+}
+
+
+.campos-enlaces{
+    height: 22rem;
+    width: 90%;
+    border-radius: 1.5rem;
+    background-color: var(--hover);
+    font-family: var(--text);
+
+    box-shadow: 0px 1px 13px 0px #DBD3D8;
+
+}
+
+.campo__label_int{
+    flex: 0 0 9rem;
+    text-align: center;
+    align-items: center;
+    padding-right: 2rem;
+    height: 2rem;
+}
+
+.img_enlaces{
+    width: 30rem;
+    height: 22rem;
+    border-radius: 0.5rem;
+
+}
+
+.table_enl{  
+    padding-top: 5rem;
+    padding-left: 10rem;
+    height:70%;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    
+}
+
+
+.campo-enl-first{
+    height: 25rem;
+    width: 30rem;
+    float: left;
+    border-radius: 0.5rem;
+    }
+    
+.campo-enl-second{
+    padding-top: 1rem;
+    height: 8rem;
+    float: center;
+    color: var(--verde);
+    text-shadow: 0.1em 0.1em 0.2em black;
+    font-size: 1.6rem;
+
+    }
+
+.campo-enl-third{
+    padding-top: 0.2rem;
+    padding-left:  1rem;
+    padding-right:  1rem;
+    height: 8rem;
+    float: center;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    font-size: 1.3rem;
+    text-align: justify;
+    }
+
+.campo-enl-fourth{
+    padding-top: 1rem;
+    height: 8rem;
+    float: center;
+    align-items: center;
+    font-size: 1.4rem;
+    color: var(--color-title-buttons);
+    }    
+
+.campo__label_fh{
+        font-size: 1.4rem;
+        color: var(--color-title-buttons);
+    }    
+    
+    .divintegrantes{
+        height: 20%;
+        width: 100%;
+        float: absolute;
+        padding-top: 3rem;
+    }    
+.titulointegrantes{
+    text-align: center;
+    font-family: var(--title);
+    font-size: 5rem;
+    color: var(--verde);
+    text-shadow: 0.1em 0.1em 0.2em rgba(17, 192, 61, 0.479);
+}
+.textointegrantes{
+    text-align: center;
+    font-family: var(--text);
+    font-size: 2rem;
+    color: var(--secundario);
 }
