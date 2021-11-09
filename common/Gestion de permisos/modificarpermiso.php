@@ -35,7 +35,7 @@ mysqli_set_charset($con,"utf8");
         p.actividad AS  pactividad, 
         p.rol AS rol 
         FROM actividades AS a inner join permisos AS p on a.id_actividad = p.actividad;";
-        $resultado = mysqli_query($con,$consulta) or die(mysqli_error($con));
+        $resultado = mysqli_query($con,$consulta) or die(mysql_error());
        
         while ($fila = mysqli_fetch_array($resultado)) {
           echo '<option value="'.$fila['pactividad'].'">'.$fila['actividad'].$fila['rol'].'</option>';

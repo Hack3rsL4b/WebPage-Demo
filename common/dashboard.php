@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins&family=Roboto+Mono&family=Tourney&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" href="../img/iconNoBackground.png">
+    <link rel="icon" href="../img/icon.png">
     <title>Hack3rs L4b</title>
 </head>
 
@@ -47,9 +47,8 @@
                     <h1 class="nombre">SegurInfo <span>Hack3rs</span> L4b</h1s>
                 </a>
             </div>
-            <div class="inciarsesion">
-                <a href="../php/cerrar.php" class="inicio">Cerrar sesión</a>
-            </div>
+
+            
         </div>
     </header>
 
@@ -76,9 +75,9 @@
 
             <li>
                 <div class="perfil">
-                    <a href="perfil.php" target="iframedash">
+                    <a href="perfil.php"  target="iframedash">
                         <div class="perfil-contenido">
-                            <img src="../img/iconNoBackground.png" alt="img perfil" class="imgperfil">
+                        <img class="fotoperini" src= "data:image/jpg;base64, <?php echo base64_encode ($fotoperfil);?>"/>
                         </div>
 
                         <div class="perfil-info">

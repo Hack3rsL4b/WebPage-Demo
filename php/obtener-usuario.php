@@ -13,6 +13,7 @@ mysqli_set_charset($con, "utf8");
 
 $query = "SELECT 
 $bd.usuarios.id_usuario AS id,
+$bd.usuarios.foto_usuario AS fotoperfil,
 $bd.usuarios.nombre AS nombre,
 $bd.usuarios.apellido AS apellido, 
 $bd.usuarios.contrasenia AS contrasenia, 
@@ -31,6 +32,7 @@ $result = mysqli_query($con, $query);
 
 while ($fila = mysqli_fetch_assoc($result)) {
     $id_usuario=$fila['id'];
+    $fotoperfil=$fila['fotoperfil'];
     $nombre = $fila['nombre'];
     $apellido = $fila['apellido'];
     $usuariob = $fila['usuario'];

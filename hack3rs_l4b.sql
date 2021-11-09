@@ -330,3 +330,61 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+INSERT INTO hack3rs_l4b.eventos (`id_evento`, `nombre`, `descripcion`, `ubicacion`, `fecha_inicio`, `fecha_fin`, `fecha_postulacion`) VALUES
+(1, 'Semana Ingeniería', 'Se hace la primer presentación formal del proyecto, presentado por los desarrolladores: Michael Gonzalez, Karen Espitia, Gian Herrera.', 'Virtual', '2021-11-09 14:00:00', '2021-11-09 17:00:00', '2021-11-04 16:00:00'),
+(2, 'Ejemplo', 'Ejemplo', 'Ejemplo', '2021-11-08 15:05:44', '2021-11-08 15:05:44', '2021-11-08 15:05:44'),
+(3, 'Ejemplo', 'Ejemplo', 'Ejemplo', '2021-11-08 15:05:44', '2021-11-08 15:05:44', '2021-11-08 15:05:44');
+
+
+
+INSERT INTO hack3rs_l4b.integrantes (`programa`, `descripcion`, `id_usuario`) VALUES
+('Ingeniería de sistemas', 'Proyectos:  1.PortalmyU: Autentificación centralizada mediante SSO de sistemas de información 2. Desarrollo de página web para el semillero Segurinfo-H4ck4rs L4b.
+ Sexto Semestre . Ingresó al semillero en el año 2021-1', '2'),
+ ('Ingeniería de sistemas', 'Proyectos:  1.PortalmyU: Autentificación centralizada mediante SSO de sistemas de información 2. Desarrollo de página web para el semillero Segurinfo-H4ck4rs L4b.
+ Sexto Semestre . Ingresó al semillero en el año 2021-1', '3'),
+ ('Ingeniería de sistemas', 'Proyectos:  1. Data Network Overlock: Sistema de Monitoreo y Gestión de Vulnerabilidades en Sistemas Activos de Red de Datos.
+ Sexto Semestre . Ingresó al semillero en el año 2021-1', '4'),
+ ('Ingeniería de sistemas', 'Proyectos:  1. Data Network Overlock: Sistema de Monitoreo y Gestión de Vulnerabilidades en Sistemas Activos de Red de Datos.
+ Sexto Semestre . Ingresó al semillero en el año 2021-1', '5'),
+ ('Ingeniería de sistemas', 'Proyectos:  1. Certifield Sistema de Generación y Validación para Certificados
+Academicos Digitales. 
+ Quinto Semestre . Ingresó al semillero en el año 2021-2', '16'),
+  ('Ingeniería de sistemas', 'Proyectos:  Sistema de escritorios virtuales. 
+ Noveno Semestre . Ingresó al semillero en el año 2021-1', '18'),
+  ('Ingeniería de sistemas', 'Proyectos:  Sistema de escritorios virtuales. 
+ Noveno Semestre . Ingresó al semillero en el año 2021-1', '19'),
+ ('Ingeniería de sistemas', 'Proyectos:  Sistema de escritorios virtuales. 
+ Noveno Semestre . Ingresó al semillero en el año 2021-1', '20'),
+ ('Ingeniería de sistemas', 'Proyectos:  1. PortalmyU: Autentificación centralizada mediante SSO de sistemas de información. 
+ Noveno Semestre . Ingresó al semillero en el año 2021-1', '21'),
+  ('Ingeniería de sistemas', 'Proyectos: 1. PortalmyU: Autentificación centralizada mediante SSO de sistemas de información. 
+ Sexto Semestre . Ingresó al semillero en el año 2021-1', '23'),
+('Ingeniería de sistemas', 'Proyectos:  1. Certifield Sistema de Generación y Validación para Certificados
+Academicos Digitales. Quinto Semestre. Ingresó al semillero en el año 2021-2', '22'),
+('Ingeniería de sistemas', 'Proyectos:  1. Certifield Sistema de Generación y Validación para Certificados
+Academicos Digitales. Quinto Semestre. Ingresó al semillero en el año 2021-2', '24');
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
