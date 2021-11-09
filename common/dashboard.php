@@ -42,9 +42,9 @@
     <header>
         <div class="header">
             <div class="logo">
-                <a href="../">
+                <a href="./bienvenida.php" target="iframedash">
                     <img src="../img/iconNoBackground.png" alt="ImagenLogo" class="ilogo">
-                    <h1 class="nombre">Hack3rs <span>L4b</span></h1s>
+                    <h1 class="nombre">SegurInfo <span>Hack3rs</span> L4b</h1s>
                 </a>
             </div>
             <div class="inciarsesion">
@@ -78,7 +78,7 @@
                 <div class="perfil">
                     <a href="perfil.php" target="iframedash">
                         <div class="perfil-contenido">
-                            <img src="../img/perfil.png" alt="img perfil" class="imgperfil">
+                            <img src="../img/iconNoBackground.png" alt="img perfil" class="imgperfil">
                         </div>
 
                         <div class="perfil-info">

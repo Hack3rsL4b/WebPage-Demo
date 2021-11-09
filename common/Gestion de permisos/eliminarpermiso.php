@@ -49,7 +49,7 @@ mysqli_set_charset($con,"utf8");
       
       <input class="boton" type="submit" value="Borrar">    
         <form>
-                    <a href="./gestion-usuarios.php">
+                    <a href="../gestion-usuarios.php">
                         <input class="boton" type="submit"value="Atrás">
                     </a>
                 </form>                        

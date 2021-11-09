@@ -62,7 +62,7 @@ mysqli_set_charset($con,"utf8");
       </select>
       <input class="boton" type="submit" value="enviar"> 
         <form>
-                    <a href="./gestion-usuarios.php">
+                    <a href="../gestion-actividades.php">
                         <input class="boton" type="submit"value="Atrás">
                     </a>
                 </form>                         
