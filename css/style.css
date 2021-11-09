@@ -693,6 +693,7 @@ li {
     background-color: var(--hover);
     border-radius: 1.5rem;
     margin-bottom: 1rem;
+
 }
 
 /* Integrantes */
@@ -940,4 +941,5 @@ li {
     font-family: var(--text);
     font-size: 2rem;
     color: var(--secundario);
+
 }
