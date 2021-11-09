@@ -37,6 +37,7 @@
                 <li>
                     <span class="welcome">NFT</span>
                     <p>Juego NFT basado en blockchain</p>
+                    <p class="objective">Construcción de un juego mendiante el uso de tokens criptográficos creados con blockchain</p>
                 </li>
             </ul>
             <h3 class="title-home">Año 2018</h3>

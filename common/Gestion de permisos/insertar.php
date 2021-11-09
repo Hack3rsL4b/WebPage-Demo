@@ -27,5 +27,3 @@ header("location:../gestion-permisos.php");
 
 
 mysqli_close($con);
-?>
-

@@ -34,5 +34,3 @@ header("location:../gestion-usuarios.php");
 
 
 mysqli_close($con);
-?>
-

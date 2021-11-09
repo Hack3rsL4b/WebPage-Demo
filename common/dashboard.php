@@ -47,8 +47,9 @@
                     <h1 class="nombre">SegurInfo <span>Hack3rs</span> L4b</h1s>
                 </a>
             </div>
-
-            
+            <div class="inciarsesion">
+                <a href="../php/cerrar.php" class="inicio">Cerrar sesión</a>
+            </div>
         </div>
     </header>
 

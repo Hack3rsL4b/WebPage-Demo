@@ -48,7 +48,7 @@
 }
 
 .content .title {
-    font-size: 5rem;
+    font-size: 6.5rem;
 }
 
 .icons {
@@ -64,29 +64,4 @@
 
 .icons .logotipos {
     margin: auto 1.5rem;
-}
-
-
-@media (min-width: 1400px) {
-    .content {
-        max-width: 910px;
-    }
-}
-
-@media (max-width: 1065px) {
-    .content .title {
-        font-size: 8vh;
-    }
-    .content p {
-        font-size: 3vh;
-    }
-}
-
-@media (min-height: 600px) {
-    .content {
-        min-height: 500px;
-    }
-    .content p {
-        font-size: 2.1vh;
-    }
 }
